@@ -1,0 +1,934 @@
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HOMEPAGE_BANNER_-_FAMILY_EXTENSIONS_2160X1005_91635569-bb31-4881-bee8-6b331bb75599.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "LIMITED EDITION",
+            "button_1_text": "Shop Now",
+            "button_1_link": "shopify:\/\/collections\/lemtosh-limited-edition",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffcd03",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 36
+          }
+        }
+      },
+      "block_order": [
+        "slide-1"
+      ],
+      "settings": {
+        "section_height": "medium",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NEW_VTO_NOVEMBER_2022_1.jpg",
+            "tab_label": "Text 1",
+            "subheading": "Subheading",
+            "title": "Image with text",
+            "content": "<p>Use image with text to give your customers insight into your brand. Select imagery and text that relates to your style and story.<\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item-1"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-frames",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection-1"
+      ],
+      "settings": {
+        "subheading": "Your title",
+        "title": "Collection",
+        "content": "",
+        "products_count": 8,
+        "products_per_row": 3,
+        "stack_products": true,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "shop-the-look": {
+      "type": "shop-the-look",
+      "blocks": {
+        "look-1": {
+          "type": "look",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2UPR_-_TRAVEL_BUNDLE_1528x1200_1.jpg",
+            "dot_type": "normal",
+            "product_1": "lemtosh",
+            "product_1_horizontal_position": 38,
+            "product_1_vertical_position": 30,
+            "product_1_horizontal_position_mobile": 30,
+            "product_1_vertical_position_mobile": 30,
+            "product_2": "lemtosh-limited-edition-winter-2022",
+            "product_2_horizontal_position": 70,
+            "product_2_vertical_position": 25,
+            "product_2_horizontal_position_mobile": 50,
+            "product_2_vertical_position_mobile": 50,
+            "product_3": "",
+            "product_3_horizontal_position": 62,
+            "product_3_vertical_position": 50,
+            "product_3_horizontal_position_mobile": 70,
+            "product_3_vertical_position_mobile": 70
+          }
+        }
+      },
+      "block_order": [
+        "look-1"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "label": "Shop the looks"
+      }
+    },
+    "blog-posts": {
+      "type": "blog-posts",
+      "settings": {
+        "blog": "moscot-moments",
+        "subheading": "",
+        "title": "",
+        "articles_count": 3,
+        "stack_mobile": false,
+        "show_category": true,
+        "show_excerpt": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "image-with-text-block": {
+      "type": "image-with-text-block",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify:\/\/shop_images\/BEST_SELLERS_HOMEPAGE_2.jpg",
+        "subheading": "Subheading",
+        "title": "Image with text block",
+        "content": "<p>Use block text to give your customers insight into your brand. Select impactful text that relates to your brand and story.<\/p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_position": "left",
+        "text_alignment": "center",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "average-sun",
+            "subheading": "",
+            "title": "Sunglasses",
+            "link_text": "Shop Now",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "cat-eye-frames",
+            "subheading": "",
+            "title": "Cat Frames",
+            "link_text": "Shop Now",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "classiconic™-sun-aviators",
+            "subheading": "",
+            "title": "Aviator",
+            "link_text": "Shop Now",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-2",
+        "collection-3"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "layout": "collage",
+        "subheading": "Subheading",
+        "title": "Collection list",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "content": "Write some content about what they are saying about your store.",
+            "author": "John S."
+          }
+        }
+      },
+      "block_order": [
+        "testimonial-1"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "subheading": "",
+        "title": "",
+        "background": "#ffcd03",
+        "text_color": "#000000"
+      }
+    },
+    "timeline": {
+      "type": "timeline",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hp_switch_up.png",
+            "label": "2000",
+            "title": "Your heading",
+            "content": "<p>Write content about your store<\/p>",
+            "button_text": "Shop",
+            "button_link": ""
+          }
+        },
+        "item-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/novwk2_2ur.png",
+            "label": "2010",
+            "title": "Your heading",
+            "content": "<p>Write content about your store<\/p>",
+            "button_text": "Shop",
+            "button_link": ""
+          }
+        },
+        "item-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/UPDATEDHOMEPAGE.jpg",
+            "label": "2020",
+            "title": "Your heading",
+            "content": "<p>Write content about your store<\/p>",
+            "button_text": "Shop",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item-1",
+        "item-2",
+        "item-3"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "MEET THE MOSCOTS",
+        "text_position": "middle",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "item_background": "rgba(0,0,0,0)",
+        "item_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "featured-product": {
+      "type": "featured-product",
+      "blocks": {
+        "variant-picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "quantity-selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy-buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "atc_button_background": "rgba(0,0,0,0)",
+            "atc_button_text_color": "rgba(0,0,0,0)",
+            "buy_now_button_background": "rgba(0,0,0,0)",
+            "buy_now_button_text_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "variant-picker",
+        "quantity-selector",
+        "buy-buttons"
+      ],
+      "settings": {
+        "product": "lemtosh",
+        "subheading": "Subheading",
+        "title": "Featured product",
+        "show_vendor": true,
+        "show_sku": false,
+        "show_taxes_included": false,
+        "show_product_rating": false,
+        "show_share_buttons": false,
+        "help_page": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "show_thumbnails_on_mobile": false,
+        "desktop_thumbnails_position": "bottom",
+        "transition_effect": "slide",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "text-with-icons": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Free shipping",
+            "content": "<p>Free worldwide shipping and returns - customs and duties taxes included<\/p>"
+          }
+        },
+        "item-2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-phone",
+            "custom_icon_width": 50,
+            "title": "Customer service",
+            "content": "<p>We are available from monday to friday to answer your questions.<\/p>"
+          }
+        },
+        "item-3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-lock",
+            "custom_icon_width": 50,
+            "title": "Secure payment",
+            "content": "<p>Your payment information is processed securely.<\/p>"
+          }
+        },
+        "item-4": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-email",
+            "custom_icon_width": 50,
+            "title": "Contact us",
+            "content": "<p>Need to contact us ? Just send us an e-mail at info@yourstore.com<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item-1",
+        "item-2",
+        "item-3",
+        "item-4"
+      ],
+      "settings": {
+        "background": "#ffcd03",
+        "text_color": "#000000"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify:\/\/shop_images\/HOMEPAGE_BANNER_3_1.jpg",
+        "subheading": "Join the Family",
+        "content": "<p>Enjoy 10% off your first online purchase and stay up to date on all things MOSCOT.<\/p>",
+        "text_position": "right",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "4fd4baff-fb19-4898-b314-f8b3554d5a59": {
+      "type": "collection-list",
+      "blocks": {
+        "template--14481186619454__4fd4baff-fb19-4898-b314-f8b3554d5a59-1668440197d303e875-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "blue-light-clip-ons",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "template--14481186619454__4fd4baff-fb19-4898-b314-f8b3554d5a59-1668440197d303e875-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "blue-light-glasses",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "template--14481186619454__4fd4baff-fb19-4898-b314-f8b3554d5a59-1668440197d303e875-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "build-your-frames",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "template--14481186619454__4fd4baff-fb19-4898-b314-f8b3554d5a59-1668440197d303e875-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "aviators",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "template--14481186619454__4fd4baff-fb19-4898-b314-f8b3554d5a59-1668440197d303e875-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "blue-hue",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "template--14481186619454__4fd4baff-fb19-4898-b314-f8b3554d5a59-1668440197d303e875-5": {
+          "type": "collection",
+          "settings": {
+            "collection": "build-your-sunglasses",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "template--14481186619454__4fd4baff-fb19-4898-b314-f8b3554d5a59-1668440197d303e875-0",
+        "template--14481186619454__4fd4baff-fb19-4898-b314-f8b3554d5a59-1668440197d303e875-1",
+        "template--14481186619454__4fd4baff-fb19-4898-b314-f8b3554d5a59-1668440197d303e875-2",
+        "template--14481186619454__4fd4baff-fb19-4898-b314-f8b3554d5a59-1668440197d303e875-3",
+        "template--14481186619454__4fd4baff-fb19-4898-b314-f8b3554d5a59-1668440197d303e875-4",
+        "template--14481186619454__4fd4baff-fb19-4898-b314-f8b3554d5a59-1668440197d303e875-5"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "layout": "grid",
+        "subheading": "Subheading",
+        "title": "Collection list",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "e1d22ac9-9f4f-459f-a3d9-a8ac5676ff6d": {
+      "type": "faq",
+      "blocks": {
+        "template--14481186619454__e1d22ac9-9f4f-459f-a3d9-a8ac5676ff6d-166844019775f5bfb5-0": {
+          "type": "category",
+          "settings": {
+            "title": "Shipping"
+          }
+        },
+        "template--14481186619454__e1d22ac9-9f4f-459f-a3d9-a8ac5676ff6d-166844019775f5bfb5-1": {
+          "type": "question",
+          "settings": {
+            "title": "Do you ship overseas?",
+            "answer": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.<\/p>"
+          }
+        },
+        "template--14481186619454__e1d22ac9-9f4f-459f-a3d9-a8ac5676ff6d-166844019775f5bfb5-2": {
+          "type": "question",
+          "settings": {
+            "title": "How long will it take to get my order?",
+            "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.<\/p>"
+          }
+        },
+        "template--14481186619454__e1d22ac9-9f4f-459f-a3d9-a8ac5676ff6d-166844019775f5bfb5-3": {
+          "type": "category",
+          "settings": {
+            "title": "Other"
+          }
+        },
+        "template--14481186619454__e1d22ac9-9f4f-459f-a3d9-a8ac5676ff6d-166844019775f5bfb5-4": {
+          "type": "question",
+          "settings": {
+            "title": "Any question?",
+            "answer": "<p>You can contact us through our contact page! We will be happy to assist you.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14481186619454__e1d22ac9-9f4f-459f-a3d9-a8ac5676ff6d-166844019775f5bfb5-0",
+        "template--14481186619454__e1d22ac9-9f4f-459f-a3d9-a8ac5676ff6d-166844019775f5bfb5-1",
+        "template--14481186619454__e1d22ac9-9f4f-459f-a3d9-a8ac5676ff6d-166844019775f5bfb5-2",
+        "template--14481186619454__e1d22ac9-9f4f-459f-a3d9-a8ac5676ff6d-166844019775f5bfb5-3",
+        "template--14481186619454__e1d22ac9-9f4f-459f-a3d9-a8ac5676ff6d-166844019775f5bfb5-4"
+      ],
+      "settings": {
+        "show_navigation": false,
+        "title": "FAQ",
+        "content": "",
+        "background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "394ae07c-962f-4638-b127-2d6e0cb07da5": {
+      "type": "gallery",
+      "blocks": {
+        "template--14481186619454__394ae07c-962f-4638-b127-2d6e0cb07da5-1668440198af103314-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FRANKIE-OliveTortoise-model-pos-4_900x_b5ff516d-221c-4472-adf1-a6b04f992e91.jpg",
+            "caption": ""
+          }
+        },
+        "template--14481186619454__394ae07c-962f-4638-b127-2d6e0cb07da5-1668440198af103314-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/frankie-olive-tortoise-model-pos-5_900x_0759922e-3b3a-4bfc-b03e-273bf5fe7a35.jpg",
+            "caption": ""
+          }
+        },
+        "template--14481186619454__394ae07c-962f-4638-b127-2d6e0cb07da5-1668440198af103314-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/frankie-model-pos-2_900x_9da1ee2c-dd7e-498e-a2e7-b9e8974907db.jpg",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14481186619454__394ae07c-962f-4638-b127-2d6e0cb07da5-1668440198af103314-0",
+        "template--14481186619454__394ae07c-962f-4638-b127-2d6e0cb07da5-1668440198af103314-1",
+        "template--14481186619454__394ae07c-962f-4638-b127-2d6e0cb07da5-1668440198af103314-2"
+      ],
+      "settings": {
+        "subheading": "Subheading",
+        "title": "Gallery",
+        "show_arrows": true,
+        "background": "#ffcd03",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "830e10ac-bcd0-4cd1-9c0e-3509d61bf2f5": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "auto",
+        "image": "shopify:\/\/shop_images\/HOMEPAGE_BANNER_FALL_22_A.jpg",
+        "subheading": "Bloomberg",
+        "title": "",
+        "content": "<p>“The brand doesn’t chase trends, relying instead on their long history of making glasses to offe the styles people want at any given moment”<\/p>",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_center",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "74779517-d7de-4889-a037-2e6a60e0f2a7": {
+      "type": "logo-list",
+      "blocks": {
+        "template--14481186619454__74779517-d7de-4889-a037-2e6a60e0f2a7-1668440112edfbdb45-0": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "template--14481186619454__74779517-d7de-4889-a037-2e6a60e0f2a7-1668440112edfbdb45-1": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "template--14481186619454__74779517-d7de-4889-a037-2e6a60e0f2a7-1668440112edfbdb45-2": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "template--14481186619454__74779517-d7de-4889-a037-2e6a60e0f2a7-1668440112edfbdb45-3": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "template--14481186619454__74779517-d7de-4889-a037-2e6a60e0f2a7-1668440112edfbdb45-4": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "template--14481186619454__74779517-d7de-4889-a037-2e6a60e0f2a7-1668440112edfbdb45-5": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14481186619454__74779517-d7de-4889-a037-2e6a60e0f2a7-1668440112edfbdb45-0",
+        "template--14481186619454__74779517-d7de-4889-a037-2e6a60e0f2a7-1668440112edfbdb45-1",
+        "template--14481186619454__74779517-d7de-4889-a037-2e6a60e0f2a7-1668440112edfbdb45-2",
+        "template--14481186619454__74779517-d7de-4889-a037-2e6a60e0f2a7-1668440112edfbdb45-3",
+        "template--14481186619454__74779517-d7de-4889-a037-2e6a60e0f2a7-1668440112edfbdb45-4",
+        "template--14481186619454__74779517-d7de-4889-a037-2e6a60e0f2a7-1668440112edfbdb45-5"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "subheading": "",
+        "title": "Brands",
+        "button_text": "",
+        "button_link": "",
+        "stack_logos": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "logo_background": "rgba(0,0,0,0)"
+      }
+    },
+    "8b6bb021-6207-4331-b062-0d43726e493f": {
+      "type": "multi-column",
+      "blocks": {
+        "template--14481186619454__8b6bb021-6207-4331-b062-0d43726e493f-166844011269d9cc01-0": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Column 1",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--14481186619454__8b6bb021-6207-4331-b062-0d43726e493f-166844011269d9cc01-1": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Column 1",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--14481186619454__8b6bb021-6207-4331-b062-0d43726e493f-166844011269d9cc01-2": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Column 1",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--14481186619454__8b6bb021-6207-4331-b062-0d43726e493f-166844011269d9cc01-3": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Column 1",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "template--14481186619454__8b6bb021-6207-4331-b062-0d43726e493f-166844011269d9cc01-0",
+        "template--14481186619454__8b6bb021-6207-4331-b062-0d43726e493f-166844011269d9cc01-1",
+        "template--14481186619454__8b6bb021-6207-4331-b062-0d43726e493f-166844011269d9cc01-2",
+        "template--14481186619454__8b6bb021-6207-4331-b062-0d43726e493f-166844011269d9cc01-3"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "Subheading",
+        "title": "Multi-column",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "#ffcd03",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "bb1bfd44-a960-4367-ac5c-d98e6f96b2c0": {
+      "type": "press",
+      "blocks": {
+        "template--14481186619454__bb1bfd44-a960-4367-ac5c-d98e6f96b2c0-16684401123e2cfbc8-0": {
+          "type": "item",
+          "settings": {
+            "logo_width": 100,
+            "content": "Write some content about what they are saying about your store."
+          }
+        }
+      },
+      "block_order": [
+        "template--14481186619454__bb1bfd44-a960-4367-ac5c-d98e6f96b2c0-16684401123e2cfbc8-0"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "be04d4a1-f901-45c7-b9fc-2125e3a4caac": {
+      "type": "promotion-blocks",
+      "blocks": {
+        "template--14481186619454__be04d4a1-f901-45c7-b9fc-2125e3a4caac-1668440112c38d660f-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/OSF_DROP_2_-_HOMEPAGE_BANNER_BEST_SELLERS_5.jpg",
+            "highlight": false,
+            "subheading": "Subheading",
+            "title": "Image with text",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "middle_center",
+            "background": "#f7f8fd",
+            "text_color": "#1e316a",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        },
+        "template--14481186619454__be04d4a1-f901-45c7-b9fc-2125e3a4caac-1668440112c38d660f-1": {
+          "type": "quote",
+          "settings": {
+            "highlight": false,
+            "subheading": "Subheading",
+            "content": "Use this text to share information about your brand with your customers.",
+            "author": "John S.",
+            "background": "#f7f8fd",
+            "text_color": "#1e316a"
+          }
+        },
+        "template--14481186619454__be04d4a1-f901-45c7-b9fc-2125e3a4caac-1668440112c38d660f-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/OSF_DROP_2_-_HOMEPAGE_BANNER_BEST_SELLERS_ALTERNATE.jpg",
+            "highlight": false,
+            "subheading": "Subheading",
+            "title": "Image with text",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "middle_center",
+            "background": "#f7f8fd",
+            "text_color": "#1e316a",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        }
+      },
+      "block_order": [
+        "template--14481186619454__be04d4a1-f901-45c7-b9fc-2125e3a4caac-1668440112c38d660f-0",
+        "template--14481186619454__be04d4a1-f901-45c7-b9fc-2125e3a4caac-1668440112c38d660f-1",
+        "template--14481186619454__be04d4a1-f901-45c7-b9fc-2125e3a4caac-1668440112c38d660f-2"
+      ],
+      "settings": {
+        "subheading": "Subheading",
+        "title": "Promotion blocks",
+        "section_size": "medium",
+        "stack_on_mobile": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1052d197-31d3-48c3-bfc2-b7fa6b157c32": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "subheading": "",
+        "title": "Recently viewed",
+        "products_count": 8,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "5f91b707-f927-4646-a960-59718099e051": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "Subheading",
+        "title": "Talk about your brand",
+        "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "#ffcd03",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "cec382c1-3024-4452-bcba-9622330eee9b": {
+      "type": "contact-form",
+      "settings": {
+        "title": "Contact Us",
+        "content": "",
+        "text_1_heading": "",
+        "text_1_text": "",
+        "text_2_heading": "",
+        "text_2_text": "",
+        "background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#ffcd03",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "b987c2a5-b945-4cd1-8005-ccf99f003df5": {
+      "type": "video",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "background_type": "full_width",
+        "video_size": "auto",
+        "autoplay": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "image-with-text",
+    "featured-collections",
+    "shop-the-look",
+    "blog-posts",
+    "image-with-text-block",
+    "collection-list",
+    "testimonials",
+    "timeline",
+    "featured-product",
+    "text-with-icons",
+    "newsletter",
+    "4fd4baff-fb19-4898-b314-f8b3554d5a59",
+    "e1d22ac9-9f4f-459f-a3d9-a8ac5676ff6d",
+    "394ae07c-962f-4638-b127-2d6e0cb07da5",
+    "830e10ac-bcd0-4cd1-9c0e-3509d61bf2f5",
+    "74779517-d7de-4889-a037-2e6a60e0f2a7",
+    "8b6bb021-6207-4331-b062-0d43726e493f",
+    "bb1bfd44-a960-4367-ac5c-d98e6f96b2c0",
+    "be04d4a1-f901-45c7-b9fc-2125e3a4caac",
+    "1052d197-31d3-48c3-bfc2-b7fa6b157c32",
+    "5f91b707-f927-4646-a960-59718099e051",
+    "cec382c1-3024-4452-bcba-9622330eee9b",
+    "b987c2a5-b945-4cd1-8005-ccf99f003df5"
+  ]
+}
