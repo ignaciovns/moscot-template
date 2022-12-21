@@ -46,9 +46,94 @@
       --section-block-overlay-opacity: {{ block.settings.overlay_opacity | divided_by: 100.0 }};
     }
   {%- endfor -%}
+
+.collection-list-section .container{
+    padding-left: 138px !important;
+    padding-right: 137px !important;
+    }
+.collection-list-section .list-collections--collage .list-collections__item-list{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    }
+.collection-list-section .vns-gap-icons{
+    gap:22px    
+}
+.collection-list-section p.heading{
+    margin-bottom: 0px !important;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 31px;
+    letter-spacing: 0.04em;
+}
+.collection-list-section .list-collections--collage .list-collections__item--highlight .list-collections__item-info{
+    top: 62%   
+}
+.collection-list-section .list-collections--collage .list-collections__item--highlight span.heading--small{
+    margin-top: 23px    
+}
+.collection-list-section .list-collections__item-list{
+        gap: 22px 27px !important;
+    }
+.collection-list-section .list-collections__item span.heading--small{
+        margin-top: 14px
+    }
+.collection-list-section .heading.heading--small{
+    font-family: 'Courier New';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 31px;
+    }
+.collection-list-section .section__header{
+        margin-bottom: 73px !important;
+    }
+.collection-list-section .vertical-breather{
+    padding-top: {{section.settings.collection_top_padding | append:'px'}}!important;
+    padding-bottom:  {{section.settings.collection_bottom_padding | append:'px'}}!important;
+    }
+
+@media screen and (max-width: 425px) {
+    .collection-list-section .vns-gap-icons{
+    gap:11px    
+}
+.collection-list-section .container{
+    padding-left: 29px !important;
+    padding-right: 28px !important;
+    }
+.collection-list-section .vertical-breather{
+    padding-top: 57px !important;
+    padding-bottom:  108px !important;
+    }
+.collection-list-section .heading.h4{
+    font-size: 20px;
+    line-height: 18px;
+}
+.collection-list-section .heading.h4 svg{
+    width: 30px;
+    height: 15px;
+    }
+.collection-list-section .section__header{
+        margin-bottom: 48px !important;
+    }
+.collection-list-section .list-collections__item-list{
+        gap: 29px !important;
+    }
+.collection-list-section .list-collections__item-image{
+    min-height: 182.08px;
+    }
+    .collection-list-section .list-collections__item span.heading--small, .collection-list-section .list-collections--collage .list-collections__item--highlight span.heading--small{
+        margin-top: 9px;
+        font-size: 11.6344px;
+line-height: 18px;
+letter-spacing: 0.04em;
+    }
+    .collection-list-section .list-collections--collage .list-collections__item--highlight .list-collections__item-info{
+    top: 50%   
+}
+}
 </style>
 
-<section class="section {% unless blends_with_background %}section--flush{% endunless %}">
+<section class="section {% unless blends_with_background %}section--flush{% endunless %} collection-list-section">
   <div class="section__color-wrapper">
     <div class="{% unless blends_with_background %}vertical-breather{% endunless %}">
       {%- if section.settings.subheading != blank or section.settings.title != blank -%}
@@ -58,7 +143,15 @@
           {%- endif -%}
 
           {%- if section.settings.title != blank -%}
-            <h3 class="heading h2">{{ section.settings.title | escape }}</h3>
+            <h3 class="heading h4 tw-flex tw-justify-center tw-items-center vns-gap-icons">
+            {% if section.settings.show_title_icons %}
+                {% render 'svg-assets', id: 'left-hand'%}
+                {{ section.settings.title | escape }}
+                {% render 'svg-assets', id: 'right-hand' %}
+            {% else %}
+              {{ section.settings.title | escape }}  
+            {% endif %}
+            </h3>
           {%- endif -%}
         </header>
       {%- endif -%}
@@ -316,6 +409,12 @@
       "default": "Collection list"
     },
     {
+        "type": "checkbox",
+        "id": "show_title_icons",
+        "label": "Show icons on title",
+        "default": true
+        },
+    {
       "type": "header",
       "content": "Colors"
     },
@@ -330,6 +429,28 @@
       "id": "text_color",
       "label": "Text color",
       "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "header",
+      "content": "Section Size"
+    },
+    {
+      "type": "range",
+      "id":"collection_top_padding",
+      "label": "Top Space",
+      "min":40,
+      "max":120,
+      "step": 1,
+      "default": 110
+    },
+    {
+      "type": "range",
+      "id":"collection_bottom_padding",
+      "label": "Bottom Space",
+      "min":40,
+      "max":120,
+      "step": 1,
+      "default": 118
     }
   ],
   "presets": [
