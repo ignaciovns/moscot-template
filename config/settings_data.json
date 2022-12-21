@@ -22,7 +22,7 @@
     "product_in_stock_text_color": "#2e9e7b",
     "product_low_stock_text_color": "#de2a2a",
     "heading_font": "courier_new_n4",
-    "custom_heading_font": "Gotham-Bold",
+    "custom_heading_font": "Gotham",
     "heading_font_size": "medium",
     "heading_text_transform": "uppercase",
     "text_font": "courier_new_n4",

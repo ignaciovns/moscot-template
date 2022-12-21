@@ -33,9 +33,57 @@
 
     --section-background: {{ section_background.red }}, {{ section_background.green }}, {{ section_background.blue }};
   }
+
+.gallery-list-section .vns-gap-icons{
+    gap:22px    
+}
+.gallery-list-section .prev-next-button {
+  background: {{ section.settings.arrows_bg }};
+  color: {{ section.settings.arrows_color }};
+  width: 79px !important;
+  height: 75px !important
+}
+.gallery-list-section .section__header{
+        margin-bottom: 71px !important;
+    }
+.gallery-list-section .gallery__progress-bar-wrapper {
+    padding-right: 0px !important;
+    margin-right: 0px !important;
+    }
+.gallery-list-section .gallery__progress-bar{
+        margin-top: 98px !important;
+    }
+.gallery-list-section .vertical-breather{
+    padding-top: {{section.settings.gallery_top_padding | append:'px'}}!important;
+    padding-bottom:  {{section.settings.gallery_bottom_padding | append:'px'}}!important;
+    }
+
+@media screen and (max-width: 425px) {
+    .gallery-list-section .vns-gap-icons{
+    gap:11px    
+}
+.gallery-list-section .gallery__progress-bar{
+        margin-top: 42px !important;
+    }
+.gallery-list-section .vertical-breather{
+    padding-top: 57px !important;
+    padding-bottom:  112px !important;
+    }
+.gallery-list-section .heading.h2{
+    font-size: 20px;
+    line-height: 31px;
+}
+.gallery-list-section .heading.h2 svg{
+    width: 30px;
+    height: 15px;
+    }
+.gallery-list-section .section__header{
+        margin-bottom: 45px !important;
+    }
+}
 </style>
 
-<section class="section {% unless blends_with_background %}section--flush{% endunless %}">
+<section class="section {% unless blends_with_background %}section--flush{% endunless %} gallery-list-section" >
   <div class="section__color-wrapper {% unless blends_with_background %}vertical-breather{% endunless %}">
     {%- if section.settings.subheading != blank or section.settings.title != blank -%}
       <header class="section__header container text-container">
@@ -44,7 +92,15 @@
         {%- endif -%}
 
         {%- if section.settings.title != blank -%}
-          <h3 class="heading h2">{{ section.settings.title | escape }}</h3>
+          <h3 class="heading h2 tw-flex tw-justify-center tw-items-center vns-gap-icons">
+            {% if section.settings.show_title_icons %}
+                {% render 'svg-assets', id: 'left-hand'%}
+                {{ section.settings.title | escape }}
+                {% render 'svg-assets', id: 'right-hand' %}
+            {% else %}
+              {{ section.settings.title | escape }}  
+            {% endif %}
+            </h3>
         {%- endif -%}
       </header>
     {%- endif -%}
@@ -87,12 +143,12 @@
         <prev-next-buttons class="gallery__prev-next-buttons prev-next-buttons">
           <button class="gallery__arrow prev-next-button prev-next-button--prev">
             <span class="visually-hidden">{{ 'general.accessibility.previous' | t }}</span>
-            {%- include 'icon' with 'nav-arrow-left', direction_aware: true -%}
+            {% render 'svg-assets', id: 'left-arrow' color:  section.settings.arrows_color  %}
           </button>
 
           <button class="gallery__arrow prev-next-button prev-next-button--next">
             <span class="visually-hidden">{{ 'general.accessibility.next' | t }}</span>
-            {%- include 'icon' with 'nav-arrow-right', direction_aware: true -%}
+            {% render 'svg-assets', id: 'right-arrow' color: section.settings.arrows_color%}
           </button>
         </prev-next-buttons>
       {% endif %}
@@ -142,6 +198,12 @@
     },
     {
       "type": "checkbox",
+      "id": "show_title_icons",
+      "label": "Show icons on title",
+      "default": true
+    },
+    {
+      "type": "checkbox",
       "id": "show_arrows",
       "label": "Show navigation arrows",
       "default": true
@@ -161,6 +223,40 @@
       "id": "text_color",
       "label": "Color",
       "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "arrows_color",
+      "label": "Arrows Color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "arrows_bg",
+      "label": "Arrows Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Section Size"
+    },
+    {
+      "type": "range",
+      "id":"gallery_top_padding",
+      "label": "Top Space",
+      "min":40,
+      "max":120,
+      "step": 1,
+      "default": 110
+    },
+    {
+      "type": "range",
+      "id":"gallery_bottom_padding",
+      "label": "Bottom Space",
+      "min":40,
+      "max":120,
+      "step": 1,
+      "default": 118
     }
   ],
   "presets": [

@@ -258,8 +258,8 @@
         "id": "custom_heading_font",
         "options": [
           {
-            "value": "Gotham-Bold",
-            "label": "Gotham Bold"
+            "value": "Gotham",
+            "label": "Gotham"
           },
           {
             "value": "Gotham-Book",
@@ -329,8 +329,8 @@
         "id": "base_font_custom_font",
         "options": [
           {
-            "value": "Gotham-Bold",
-            "label": "Gotham Bold"
+            "value": "Gotham",
+            "label": "Gotham"
           },
           {
             "value": "GothamHTF-Book",
