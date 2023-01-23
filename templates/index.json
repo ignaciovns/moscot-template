@@ -6,7 +6,6 @@
         "slide-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/HOMEPAGE_BANNER_-_FAMILY_EXTENSIONS_2160X1005_91635569-bb31-4881-bee8-6b331bb75599.jpg",
             "text_position": "middle_center",
             "subheading": "",
             "title": "LIMITED EDITION",
@@ -39,12 +38,12 @@
         "item-1": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/NEW_VTO_NOVEMBER_2022_1.jpg",
-            "tab_label": "Text 1",
-            "subheading": "Subheading",
-            "title": "Image with text",
-            "content": "<p>Use image with text to give your customers insight into your brand. Select imagery and text that relates to your style and story.<\/p>",
-            "button_text": "",
+            "image": "shopify:\/\/shop_images\/Rectangle_11.jpg",
+            "tab_label": "",
+            "subheading": "",
+            "title": "VIRTUAL TRY ON",
+            "content": "<p>Try before you buy with our Virtual Try-On glasses experience! Our virtual glasses fitting, powered by true-to-scale technology, provides a realistic view of how the frame will look on your face, allowing you to try eyeglasses online. Try it today on some of our most popular styles.<br\/><\/p>",
+            "button_text": "FIND YOUR PERFECT FIT",
             "button_link": ""
           }
         }
@@ -55,6 +54,8 @@
       "settings": {
         "reveal_on_scroll": true,
         "background_type": "full_width",
+        "background_color": "#FEF9E9",
+        "button_select": "link_button",
         "background_overlap": "image",
         "image_position": "left",
         "text_alignment": "center",
@@ -101,7 +102,6 @@
         "look-1": {
           "type": "look",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2UPR_-_TRAVEL_BUNDLE_1528x1200_1.jpg",
             "dot_type": "normal",
             "product_1": "lemtosh",
             "product_1_horizontal_position": 38,
@@ -147,12 +147,12 @@
       "type": "image-with-text-block",
       "settings": {
         "reveal_on_scroll": true,
-        "image": "shopify:\/\/shop_images\/BEST_SELLERS_HOMEPAGE_2.jpg",
         "subheading": "Subheading",
         "title": "Image with text block",
         "content": "<p>Use block text to give your customers insight into your brand. Select impactful text that relates to your brand and story.<\/p>",
         "button_text": "",
         "button_link": "",
+        "background_color": "#ffffff",
         "background_type": "full_width",
         "text_position": "left",
         "text_alignment": "center",
@@ -215,8 +215,11 @@
         "layout": "collage",
         "subheading": "Subheading",
         "title": "Collection list",
+        "show_title_icons": true,
         "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
+        "text_color": "rgba(0,0,0,0)",
+        "collection_top_padding": 110,
+        "collection_bottom_padding": 118
       }
     },
     "testimonials": {
@@ -247,7 +250,6 @@
         "item-1": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hp_switch_up.png",
             "label": "2000",
             "title": "Your heading",
             "content": "<p>Write content about your store<\/p>",
@@ -258,7 +260,6 @@
         "item-2": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/novwk2_2ur.png",
             "label": "2010",
             "title": "Your heading",
             "content": "<p>Write content about your store<\/p>",
@@ -269,7 +270,6 @@
         "item-3": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/UPDATEDHOMEPAGE.jpg",
             "label": "2020",
             "title": "Your heading",
             "content": "<p>Write content about your store<\/p>",
@@ -401,7 +401,6 @@
       "type": "newsletter",
       "settings": {
         "reveal_on_scroll": true,
-        "image": "shopify:\/\/shop_images\/HOMEPAGE_BANNER_3_1.jpg",
         "subheading": "Join the Family",
         "content": "<p>Enjoy 10% off your first online purchase and stay up to date on all things MOSCOT.<\/p>",
         "text_position": "right",
@@ -507,8 +506,11 @@
         "layout": "grid",
         "subheading": "Subheading",
         "title": "Collection list",
+        "show_title_icons": true,
         "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
+        "text_color": "rgba(0,0,0,0)",
+        "collection_top_padding": 110,
+        "collection_bottom_padding": 118
       }
     },
     "e1d22ac9-9f4f-459f-a3d9-a8ac5676ff6d": {
@@ -569,21 +571,18 @@
         "template--14481186619454__394ae07c-962f-4638-b127-2d6e0cb07da5-1668440198af103314-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/FRANKIE-OliveTortoise-model-pos-4_900x_b5ff516d-221c-4472-adf1-a6b04f992e91.jpg",
             "caption": ""
           }
         },
         "template--14481186619454__394ae07c-962f-4638-b127-2d6e0cb07da5-1668440198af103314-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/frankie-olive-tortoise-model-pos-5_900x_0759922e-3b3a-4bfc-b03e-273bf5fe7a35.jpg",
             "caption": ""
           }
         },
         "template--14481186619454__394ae07c-962f-4638-b127-2d6e0cb07da5-1668440198af103314-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/frankie-model-pos-2_900x_9da1ee2c-dd7e-498e-a2e7-b9e8974907db.jpg",
             "caption": ""
           }
         }
@@ -596,9 +595,14 @@
       "settings": {
         "subheading": "Subheading",
         "title": "Gallery",
+        "show_title_icons": true,
         "show_arrows": true,
         "background": "#ffcd03",
-        "text_color": "rgba(0,0,0,0)"
+        "text_color": "rgba(0,0,0,0)",
+        "arrows_color": "rgba(0,0,0,0)",
+        "arrows_bg": "#FFFFFF",
+        "gallery_top_padding": 110,
+        "gallery_bottom_padding": 118
       }
     },
     "830e10ac-bcd0-4cd1-9c0e-3509d61bf2f5": {
@@ -606,7 +610,6 @@
       "settings": {
         "reveal_on_scroll": true,
         "section_height": "auto",
-        "image": "shopify:\/\/shop_images\/HOMEPAGE_BANNER_FALL_22_A.jpg",
         "subheading": "Bloomberg",
         "title": "",
         "content": "<p>“The brand doesn’t chase trends, relying instead on their long history of making glasses to offe the styles people want at any given moment”<\/p>",
@@ -791,7 +794,6 @@
         "template--14481186619454__be04d4a1-f901-45c7-b9fc-2125e3a4caac-1668440112c38d660f-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/OSF_DROP_2_-_HOMEPAGE_BANNER_BEST_SELLERS_5.jpg",
             "highlight": false,
             "subheading": "Subheading",
             "title": "Image with text",
@@ -819,7 +821,6 @@
         "template--14481186619454__be04d4a1-f901-45c7-b9fc-2125e3a4caac-1668440112c38d660f-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/OSF_DROP_2_-_HOMEPAGE_BANNER_BEST_SELLERS_ALTERNATE.jpg",
             "highlight": false,
             "subheading": "Subheading",
             "title": "Image with text",
