@@ -4,7 +4,9 @@
   {%- assign is_boxed = false -%}
 {%- endif -%}
 
-{%- if section.settings.text_background != settings.background and section.settings.text_background != 'rgba(0,0,0,0)' -%}
+{%- if section.settings.text_background != settings.background
+  and section.settings.text_background != 'rgba(0,0,0,0)'
+-%}
   {%- assign blends_with_background = false -%}
 {%- else -%}
   {%- assign blends_with_background = true -%}
@@ -47,6 +49,10 @@
     --prev-next-button-color: {{ settings.text_color.red }}, {{ settings.text_color.green }}, {{ settings.text_color.blue }};
 
     --section-block-background: {{ section_block_background.red }}, {{ section_block_background.green }}, {{ section_block_background.blue }};
+    --section-background-color: {{section.settings.background_color}};
+  }
+  .text-block-background{
+    background-color: var(--section-background-color)
   }
 
   @media screen and (max-width: 999px) {
@@ -69,14 +75,45 @@
 </style>
 
 <section class="section {% unless is_boxed or section.settings.text_position contains 'overlap' %}section--flush{% endunless %}">
-  <div {% if is_boxed %}class="container"{% endif %}>
-    <image-with-text-block {% if section.settings.reveal_on_scroll %}reveal-on-scroll{% endif %} class="image-with-text-block {% if section.settings.text_position contains 'overlap' %}image-with-text-block--overlap-{{ section.settings.text_position | split: '_' | last }}{% endif %}">
+  <div
+    {% if is_boxed %}
+      class="container"
+    {% endif %}
+  >
+    <image-with-text-block
+      {% if section.settings.reveal_on_scroll %}
+        reveal-on-scroll
+      {% endif %}
+      class="image-with-text-block {% if section.settings.text_position contains 'overlap' %}image-with-text-block--overlap-{{ section.settings.text_position | split: '_' | last }}{% endif %} "
+    >
       <div class="image-with-text-block__image-wrapper">
         {%- if section.settings.image != blank -%}
-          <img class="image-with-text-block__image {% if section.settings.mobile_image != blank %}hidden-pocket{% endif %}" {% if section.settings.reveal_on_scroll %}reveal{% endif %} loading="lazy" sizes="(max-width: 999px) 100vw, {% if section.settings.text_position contains 'overlap' %}72vw{% elsif section.settings.background_type == 'boxed' %}min(1520px, 100vw){% else %}100vw{% endif %}" {% render 'image-attributes', image: section.settings.image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' %}>
+          <img
+            class="image-with-text-block__image {% if section.settings.mobile_image != blank %}hidden-pocket{% endif %}"
+            {% if section.settings.reveal_on_scroll %}
+              reveal
+            {% endif %}
+            loading="lazy"
+            sizes="(max-width: 999px) 100vw, {% if section.settings.text_position contains 'overlap' %}72vw{% elsif section.settings.background_type == 'boxed' %}min(1520px, 100vw){% else %}100vw{% endif %}"
+            {% render 'image-attributes',
+              image: section.settings.image,
+              sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000'
+            %}
+          >
 
           {%- if section.settings.mobile_image != blank -%}
-            <img class="image-with-text-block__image hidden-lap-and-up" {% if section.settings.reveal_on_scroll %}reveal{% endif %} loading="lazy" sizes="100vw" {% render 'image-attributes', image: section.settings.mobile_image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400' %}>
+            <img
+              class="image-with-text-block__image hidden-lap-and-up"
+              {% if section.settings.reveal_on_scroll %}
+                reveal
+              {% endif %}
+              loading="lazy"
+              sizes="100vw"
+              {% render 'image-attributes',
+                image: section.settings.mobile_image,
+                sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400'
+              %}
+            >
           {%- endif -%}
         {%- else -%}
           {%- capture image_classes -%}image-with-text-block__image image-with-text-block__image--placeholder placeholder-background{%- endcapture -%}
@@ -92,7 +129,7 @@
       {%- capture section_content -%}
         {%- assign text_position = section.settings.text_position | split: '_' | last -%}
 
-        <div {% if section.settings.reveal_on_scroll %}reveal{% endif %} class="image-with-text-block__content content-box content-box--small content-box--text-{{ section.settings.text_alignment}} content-box--{{ text_position }} text-container">
+        <div {% if section.settings.reveal_on_scroll %}reveal{% endif %} class="image-with-text-block__content content-box content-box--small content-box--text-{{ section.settings.text_alignment}} content-box--{{ text_position }} text-container text-block-background">
           {%- if section.settings.subheading != blank -%}
             <h2 class="heading heading--small">
               <split-lines {% if section.settings.reveal_on_scroll %}reveal{% endif %}>{{ section.settings.subheading | escape }}</split-lines>
@@ -181,6 +218,22 @@
       "type": "url",
       "id": "button_link",
       "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "label": "Background color",
+      "options": [
+        {
+          "value": "#ffffff",
+          "label": "Default White"
+        },
+        {
+          "value": "#FEF9E9",
+          "label": "Yellow Moscot"
+        }
+      ],
+      "default": "#ffffff"
     },
     {
       "type": "select",

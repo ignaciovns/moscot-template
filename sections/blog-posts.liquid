@@ -27,11 +27,19 @@
 
     --section-background: {{ section_background.red }}, {{ section_background.green }}, {{ section_background.blue }};
     --section-articles-count: {% if blog == blank or blog.articles_count == 0 %}{{ section.settings.articles_count }}{% else %}{{ blog.articles_count | at_most: section.settings.articles_count }}{% endif %};
+    --section-background-color: {{section.settings.background_color}};
+    --section-background-gradientcolor: {{section.settings.background_color}};
+  }
+  .blog-post-background{
+    background: var(--section-background-color);
+    padding-top:157px;
+    padding-bottom:166px;
+    height: 1024px;
   }
 </style>
 
 <section class="section {% unless blends_with_background %}section--flush{% endunless %}">
-  <div class="section__color-wrapper">
+  <div class="section__color-wrapper  blog-post-background">
     <div class="{% unless blends_with_background %}vertical-breather{% endunless %}">
       <div class="container">
         {%- if section.settings.subheading != blank or section.settings.title != blank -%}
@@ -46,7 +54,11 @@
           </header>
         {%- endif -%}
 
-        {%- if section.settings.articles_count == 4 and blog == blank or blog.articles_count >= 4 or blog.articles_count == 0 -%}
+        {%- if section.settings.articles_count == 4
+          and blog == blank
+          or blog.articles_count >= 4
+          or blog.articles_count == 0
+        -%}
           {%- assign use_featured_layout = true -%}
         {%- else -%}
           {%- assign use_featured_layout = false -%}
@@ -157,6 +169,42 @@
       "type": "blog",
       "id": "blog",
       "label": "Blog"
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "label": "Background color",
+      "options": [
+        {
+          "value": "#ffffff",
+          "label": "Default White"
+        },
+        {
+          "value": "#FEF9E9",
+          "label": "Yellow Moscot"
+        },
+        {
+          "value": "linear-gradient(180deg, #FFFAEA 0%, #FFFFFF 100%);",
+          "label": "Yellow Gradient"
+        }
+      ],
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "see_more_style",
+      "label": "See More Style",
+      "options": [
+        {
+          "value": "true",
+          "label": "Arrow button"
+        },
+        {
+          "value": "false",
+          "label": "Link button"
+        }
+      ],
+      "default": "true"
     },
     {
       "type": "text",
