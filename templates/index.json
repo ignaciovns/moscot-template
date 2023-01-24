@@ -134,7 +134,7 @@
       "settings": {
         "blog": "news",
         "background_color": "linear-gradient(180deg, #FFFAEA 0%, #FFFFFF 100%);",
-        "subheading": "asas",
+        "subheading": "",
         "title": "",
         "articles_count": 3,
         "stack_mobile": false,
