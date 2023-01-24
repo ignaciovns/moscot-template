@@ -43,30 +43,7 @@
     background-color: var(--section-background-color)
   }
 
-  .link_button{
-    text-decoration: underline
-  }
 
-  .image-with-text-title {
-    font-family: Gotham-bold;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 31px;
-    letter-spacing: 0.02em;
-    color: #000000;
-  }
-
-  .image-with-text-paragraph{
-    font-family: 'Courier New';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    /* or 125% */
-    text-align: center;
-    letter-spacing: 0.08em;
-  }
 
 
   {%- if section.settings.background_overlap != 'both' -%}
@@ -103,9 +80,64 @@
       {%- endif -%}
     }
   {%- endif -%}
+
+  .custom .container {
+    padding:0;
+  }
+  .custom .image-with-text__wrapper{
+    width:100%;
+    padding:76px 26px 75px 84px;
+  }
+
+  .custom .image-with-text__image{
+    width:502px;
+    height:545px;
+  }
+  .custom .image-with-text__content{
+    width:472px;
+    height:300px;
+    margin-left:10px;
+  }
+
+  .custom .image-with-text-title{
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 0px;
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin-bottom:40px
+  }
+
+  .custom .image-with-text__text-wrapper{
+    margin-bottom:11px;
+  }
+  .custom .image-with-text__text-wrapper p{
+    margin:0;
+    width:100%;
+    font-family: Courier New;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+  }
+
+  .custom .custom__button {
+    margin-top: 7px;
+    font-family: 'Courier New';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-decoration-line: underline;
+    color: #000000;
+  }
 </style>
 
-<section class="section {% if section.settings.background_overlap == 'both' and is_boxed == false %}section--flush{% endif %}">
+<section class="custom">
   <div
     {% if is_boxed %}
       class="container"
@@ -121,11 +153,11 @@
       style="--image-aspect-ratio: {{ first_block.settings.image.aspect_ratio | default: 1 }}; --image-max-height: {{ first_block.settings.image.height }}px"
     >
       <div class="{% unless is_boxed %}container{% endunless %}">
-        <div class="image-with-text__wrapper ">
+        <div class="image-with-text__wrapper">
           {%- assign first_image_aspect_ratio = first_block.settings.image.aspect_ratio | default: 1 -%}
           {%- assign image_count = 0 -%}
 
-          <div class="image-with-text__image-wrapper ">
+          <div class="image-with-text__image-wrapper">
             {%- for block in section.blocks -%}
               {%- if block.settings.image != blank -%}
                 <img
@@ -137,7 +169,6 @@
                   {% unless image_count == 0 %}
                     hidden
                   {% endunless %}
-                  sizes="(max-width: 740px) calc(100vw - 96px), (max-width: 999px) calc(100vw - 160px), 600px"
                   loading="lazy"
                   {% render 'image-attributes', image: block.settings.image, sizes: '600,700,800,1000,1200,1400' %}
                 >
@@ -158,8 +189,8 @@
             {%- endif -%}
           </div>
 
-          <div class="image-with-text__content-wrapper">
-            <div class="image-with-text__content-list">
+          <div class="image-with-text__content-wrapper text__block">
+            <div class="image-with-text__content-list ">
               {%- for block in section.blocks -%}
                 <image-with-text-item
                   {% if block.settings.image != blank and image_count > 1 %}
@@ -206,8 +237,11 @@
                     {%- endif -%}
 
                     {%- if block.settings.button_text != blank -%}
-                      <div class="button-wrapper">
-                        <a href="{{ block.settings.button_link }}" class="{{section.settings.button_select}}">
+                      <div class="custom__button">
+                        <a
+                          href="{{ block.settings.button_link }}"
+                          class="{{section.settings.button_select}}"
+                        >
                           {{- block.settings.button_text -}}
                         </a>
                       </div>
@@ -295,7 +329,7 @@
           "label": "Default button"
         },
         {
-          "value": "link_button",
+          "value": "custom__button",
           "label": "Link button"
         }
       ],
