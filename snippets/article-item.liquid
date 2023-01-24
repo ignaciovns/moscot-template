@@ -1,17 +1,92 @@
-<div {% if settings.stagger_blog_posts_apparition %}reveal{% endif %} class="article-item {% if use_featured_layout %}{% if is_first %}article-item--featured{% else %}article-item--horizontal{% endif %}{% endif %} image-zoom">
+<style>
+  .article-container {
+    height: 100%;
+  }
+  .article-link {
+    padding-top: 30px;
+    font-family: 'Courier New';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    text-decoration-line: underline;
+  }
+
+  .article-text {
+    margin-bottom: 30px;
+  }
+
+  .article-tag {
+    font-family: 'Courier New';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    color: #000000;
+  }
+
+  .article__title {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: #000000;
+  }
+
+  .article__content {
+    font-family: 'Courier New';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    /* or 129% */
+
+    letter-spacing: 0.08em;
+
+    /* #000000 */
+
+    color: #000000;
+  }
+</style>
+
+<div
+  {% if settings.stagger_blog_posts_apparition %}
+    reveal
+  {% endif %}
+  class="article-item {% if use_featured_layout %}{% if is_first %}article-item--featured{% else %}article-item--horizontal{% endif %}{% endif %} image-zoom article-container"
+>
   {%- if article.image -%}
     <a href="{{ article.url }}" class="article-item__image-container">
-      <img class="article-item__image" sizes="(max-width: 740px) 81vw, (max-width: 999px) 37vw, 425px" loading="lazy" {% render 'image-attributes', image: article.image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000' %}>
+      <img
+        class="article-item__image"
+        sizes="(max-width: 740px) 81vw, (max-width: 999px) 37vw, 425px"
+        loading="lazy"
+        {% render 'image-attributes', image: article.image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000' %}
+      >
 
       {%- if use_featured_layout and is_first -%}
-        <span class="article-item__arrow prev-next-button prev-next-button--next">{% render 'icon' with 'nav-arrow-right', direction_aware: true %}</span>
+        {%- if section.settings.see_more_style == 'true' -%}
+          <span
+            class="article-item__arrow prev-next-button prev-next-button--next"
+          >
+            {%- render 'icon' with 'nav-arrow-right', direction_aware: true -%}
+          </span>
+        {%- endif -%}
       {%- else -%}
-        <span class="article-item__arrow prev-next-button prev-next-button--small prev-next-button--next">{% render 'icon' with 'nav-arrow-right', direction_aware: true, width: 15, height: 12 %}</span>
+        {%- if section.settings.see_more_style == 'true' -%}
+          <span class="article-item__arrow prev-next-button prev-next-button--small prev-next-button--next">
+            {%- render 'icon' with 'nav-arrow-right', direction_aware: true, width: 15, height: 12 -%}
+          </span>
+        {%- endif -%}
       {%- endif -%}
     </a>
   {%- endif -%}
 
-  <div class="article-item__content text-container">
+  <div class="article-item__content text-container article-text">
     {%- if section.settings.show_category and article.tags.size > 0 -%}
       {%- assign blog_url_parts = article.url | split: '/' -%}
       {%- assign blog_url = '' -%}
@@ -22,17 +97,25 @@
         {%- endunless -%}
       {%- endfor -%}
 
-      <a href="{{ blog_url | remove_first: '/' }}/tagged/{{ article.tags.first | handle }}" class="article-item__category heading heading--xsmall">{{ article.tags.first }}</a>
+      <a
+        href="{{ blog_url | remove_first: '/' }}/tagged/{{ article.tags.first | handle }}"
+        class="article-item__category heading heading--xsmall article-tag"
+      >
+        {{- article.tags.first -}}
+      </a>
     {%- endif -%}
 
-    <h3 class="article-item__title heading {{ heading_size }}">
+    <h3 class="article-item__title heading {{ heading_size }} article__title">
       <a href="{{ article.url }}">{{ article.title }}</a>
     </h3>
 
     {%- if section.settings.show_excerpt and article.excerpt_or_content != blank -%}
-      <div class="article-item__excerpt text--small">
+      <div class="article-item__excerpt text--small article__content">
         {{- article.excerpt_or_content | strip_html | truncate: 200 -}}
       </div>
     {%- endif -%}
   </div>
+  {%- if section.settings.see_more_style == 'false' -%}
+    <a href="{{ article.url }}" class="article-link"> READ MORE </a>
+  {%- endif -%}
 </div>
