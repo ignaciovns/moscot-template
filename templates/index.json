@@ -133,12 +133,14 @@
       "type": "blog-posts",
       "settings": {
         "blog": "news",
-        "subheading": "asas",
+        "background_color": "linear-gradient(180deg, #FFFAEA 0%, #FFFFFF 100%);",
+        "see_more_style": "false",
+        "subheading": "",
         "title": "",
         "articles_count": 3,
         "stack_mobile": false,
-        "show_category": false,
-        "show_excerpt": false,
+        "show_category": true,
+        "show_excerpt": true,
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
@@ -601,7 +603,7 @@
         "background": "#ffcd03",
         "text_color": "rgba(0,0,0,0)",
         "arrows_color": "rgba(0,0,0,0)",
-        "arrows_bg": "#FFFFFF",
+        "arrows_bg": "#ffffff",
         "gallery_top_padding": 110,
         "gallery_bottom_padding": 118
       }
