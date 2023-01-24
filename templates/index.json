@@ -134,6 +134,7 @@
       "settings": {
         "blog": "news",
         "background_color": "linear-gradient(180deg, #FFFAEA 0%, #FFFFFF 100%);",
+        "see_more_style": "false",
         "subheading": "",
         "title": "",
         "articles_count": 3,
