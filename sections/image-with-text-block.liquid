@@ -76,7 +76,7 @@
 
   .custom-block{
     height:844px;
-    position:relative
+    position:relative;
   }
   .custom-block .container .container--flush{
     z-index:999;
@@ -120,11 +120,27 @@
     color: #000000;
   }
 
+  .custom-block .hidde{
+    display:block
+  }
+
+  .custom-block .mobile{
+    display:none
+  }
+
   @media screen and (min-width: 1024px) {
 
     .custom-block{
       height:754px;
     }
+    .custom-block .hidde{
+      width:100%;
+      display:block
+    }
+    .custom-block .mobile{
+      display:none
+    }
+
     .custom-block .image-with-text-block__image-wrapper{
       height:754px;
     }
@@ -163,6 +179,22 @@
       /* #000000 */
       color: #000000;
     }
+
+  }
+
+  @media screen and (max-width: 550px) {
+    .custom-block .hidde{
+      width:100%;
+      display:none
+    }
+
+    .custom-block .mobile{
+      width:100%;
+      display:block
+    }
+
+
+
   }
 </style>
 
@@ -181,7 +213,7 @@
       <div class="image-with-text-block__image-wrapper">
         {%- if section.settings.image != blank -%}
           <img
-            class="image-with-text-block__image {% if section.settings.mobile_image != blank %}hidden-pocket{% endif %}"
+            class="image-with-text-block__image hidde"
             {% if section.settings.reveal_on_scroll %}
               reveal
             {% endif %}
@@ -195,7 +227,7 @@
 
           {%- if section.settings.mobile_image != blank -%}
             <img
-              class="image-with-text-block__image hidden-lap-and-up"
+              class="image-with-text-block__image mobile"
               {% if section.settings.reveal_on_scroll %}
                 reveal
               {% endif %}

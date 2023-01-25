@@ -30,15 +30,33 @@
     --section-background-color: {{section.settings.background_color}};
     --section-background-gradientcolor: {{section.settings.background_color}};
   }
+
   .blog-post-background{
     background: var(--section-background-color);
     padding-top:157px;
     padding-bottom:166px;
+
+  }
+
+  .custom-blogs article-list{
     height: 1024px;
+    max-heigth:1024px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    overflow-x: scroll;
+  }
+
+  @media screen and (min-width: 550px) {
+    .custom-blogs article-list{
+      display:flex;
+      flex-direction:row;
+      overflow-y: hidden;
+    }
   }
 </style>
 
-<section class="section {% unless blends_with_background %}section--flush{% endunless %}">
+<section class="custom-blogs">
   <div class="section__color-wrapper  blog-post-background">
     <div class="{% unless blends_with_background %}vertical-breather{% endunless %}">
       <div class="container">
@@ -66,7 +84,7 @@
 
         {%- capture section_content -%}
           <article-list {% if settings.stagger_blog_posts_apparition %}stagger-apparition{% endif %} class="article-list article-list--section {% if use_featured_layout %}article-list--has-four{% endif %} {% unless section.settings.stack_mobile -%}article-list--scrollable{% else %}article-list--stacked{% endunless %} {% if use_featured_layout %}hidden-lap-and-up{% endif %}">
-            {%- for article in blog.articles limit: section.settings.articles_count -%}
+            {%- for article in blog.articles limit: section.settings.articles_count -%} 
               {%- render 'article-item', article: article, heading_size: 'h4' -%}
             {%- else -%}
               {%- for i in (1..section.settings.articles_count) -%}
