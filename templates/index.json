@@ -69,10 +69,10 @@
     "featured-collections": {
       "type": "featured-collections",
       "blocks": {
-        "collection-1": {
+        "8a187151-1c9c-4d8d-9ee5-7d5d4764a103": {
           "type": "collection",
           "settings": {
-            "collection": "all-frames",
+            "collection": "collection-test",
             "label": "",
             "button_text": "",
             "button_url": ""
@@ -80,7 +80,7 @@
         }
       },
       "block_order": [
-        "collection-1"
+        "8a187151-1c9c-4d8d-9ee5-7d5d4764a103"
       ],
       "settings": {
         "subheading": "Your title",
