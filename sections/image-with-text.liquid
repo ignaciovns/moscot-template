@@ -5,201 +5,264 @@
 {%- endif -%}
 
 <style>
-  #shopify-section-{{ section.id }} {
-    {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
-      {%- assign heading_color = settings.heading_color -%}
-      {%- assign text_color = settings.text_color -%}
-    {%- else -%}
-      {%- assign heading_color = section.settings.text_color -%}
-      {%- assign text_color = section.settings.text_color -%}
-    {%- endif -%}
+        #shopify-section-{{ section.id }} {
+          {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
+            {%- assign heading_color = settings.heading_color -%}
+            {%- assign text_color = settings.text_color -%}
+          {%- else -%}
+            {%- assign heading_color = section.settings.text_color -%}
+            {%- assign text_color = section.settings.text_color -%}
+          {%- endif -%}
 
-    {%- if section.settings.button_background == 'rgba(0,0,0,0)' -%}
-      {%- assign button_background = settings.primary_button_background -%}
-    {%- else -%}
-      {%- assign button_background = section.settings.button_background -%}
-    {%- endif -%}
+          {%- if section.settings.button_background == 'rgba(0,0,0,0)' -%}
+            {%- assign button_background = settings.primary_button_background -%}
+          {%- else -%}
+            {%- assign button_background = section.settings.button_background -%}
+          {%- endif -%}
 
-    {%- if section.settings.button_text_color == 'rgba(0,0,0,0)' -%}
-      {%- assign button_text_color = settings.primary_button_text_color -%}
-    {%- else -%}
-      {%- assign button_text_color = section.settings.button_text_color -%}
-    {%- endif -%}
+          {%- if section.settings.button_text_color == 'rgba(0,0,0,0)' -%}
+            {%- assign button_text_color = settings.primary_button_text_color -%}
+          {%- else -%}
+            {%- assign button_text_color = section.settings.button_text_color -%}
+          {%- endif -%}
 
-    --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
-    --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
-    --primary-button-background: {{ button_background.red }}, {{ button_background.green }}, {{ button_background.blue }};
-    --primary-button-text-color: {{ button_text_color.red }}, {{ button_text_color.green }}, {{ button_text_color.blue }};
+          --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
+          --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
+          --primary-button-background: {{ button_background.red }}, {{ button_background.green }}, {{ button_background.blue }};
+          --primary-button-text-color: {{ button_text_color.red }}, {{ button_text_color.green }}, {{ button_text_color.blue }};
 
-    --section-accent-background: {{ section.settings.accent_background.red }} {{ section.settings.accent_background.green }} {{ section.settings.accent_background.blue }} / {{ section.settings.accent_background.alpha }};
-    --section-autoplay-duration: {{ section.settings.cycle_speed }}s;
-    --section-animation-play-state: paused;
-    --section-background-color: {{section.settings.background_color}};
-  }
-
-
-
-  .text-with-image-background{
-    background-color: var(--section-background-color)
-  }
+          --section-accent-background: {{ section.settings.accent_background.red }} {{ section.settings.accent_background.green }} {{ section.settings.accent_background.blue }} / {{ section.settings.accent_background.alpha }};
+          --section-autoplay-duration: {{ section.settings.cycle_speed }}s;
+          --section-animation-play-state: paused;
+          --section-background-color: {{section.settings.background_color}};
+        }
 
 
+        {% comment %} automatic background {% endcomment %}
+    {% comment %}     .text-with-image-background{
+          background-color: var(--section-background-color)
+        } {% endcomment %}
 
 
-  {%- if section.settings.background_overlap != 'both' -%}
-    /* We have to remove some extra spacing adding in non-overlap mode */
-    @media screen and (max-width: 999px) {
-      {%- if section.settings.background_overlap == 'image' -%}
-        {%- unless is_boxed -%}
-          #shopify-section-{{ section.id }} .section {
-            margin-top: 0;
+
+
+        {%- if section.settings.background_overlap != 'both' -%}
+          /* We have to remove some extra spacing adding in non-overlap mode */
+          @media screen and (max-width: 999px) {
+            {%- if section.settings.background_overlap == 'image' -%}
+              {%- unless is_boxed -%}
+                #shopify-section-{{ section.id }} .section {
+                  margin-top: 0;
+                }
+
+                #shopify-section-{{ section.id }} .image-with-text {
+                  margin-bottom: calc(-1 * var(--vertical-breather)) !important;
+                }
+              {%- else -%}
+                #shopify-section-{{ section.id }} .image-with-text {
+                  margin-bottom: calc(-1 * var(--container-gutter)) !important;
+                }
+              {%- endunless -%}
+            {%- elsif section.settings.background_overlap == 'text' -%}
+              {%- unless is_boxed -%}
+                #shopify-section-{{ section.id }} .section {
+                  margin-bottom: 0;
+                }
+
+                #shopify-section-{{ section.id }} .image-with-text {
+                  margin-top: calc(-1 * var(--vertical-breather)) !important;
+                }
+              {%- else -%}
+                #shopify-section-{{ section.id }} .image-with-text {
+                  margin-top: calc(-1 * var(--container-gutter)) !important;
+                }
+              {%- endunless -%}
+            {%- endif -%}
+          }
+        {%- endif -%}
+
+        .custom image-with-text{
+          padding:0;
+          margin:0;
+        }
+
+        .custom .image-with-text__content-wrapper {
+          justify-content: center;
+          display: flex;
+          flex-wrap: nowrap;
+          margin:0;
+        }
+
+        .custom .image-with-text__image-wrapper{
+          justify-content: center;
+          display: flex;
+          flex-wrap: nowrap;
+          margin:0;
+        }
+        /* SIEMPRE IGUAL MENOS DESKTOP */
+        .custom .image-with-text__image{
+          width: 325px;
+          height: 383px;
+        }
+
+        .custom .image-with-text-title{
+          font-family: Gotham;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+        }
+
+        .custom .image-with-text__text-wrapper p{
+          font-family: 'Courier New';
+          font-style: normal;
+          font-weight: 400;
+          margin-bottom:0px;
+          text-align: center;
+        }
+
+        .custom .link_button{
+          font-family: 'Courier New';
+          font-style: normal;
+          font-weight: 400;
+          text-decoration-line: underline;
+          font-size:14px;
+          line-height: 20px;
+          text-align: center;
+          letter-spacing: 0.08em;
+        }
+
+        /* MOBILE*/
+        @media screen and (min-width:320px) and (max-width:700px){
+          .text-with-image-background{
+            background-color: #ff0000
           }
 
-          #shopify-section-{{ section.id }} .image-with-text {
-            margin-bottom: calc(-1 * var(--vertical-breather)) !important;
-          }
-        {%- else -%}
-          #shopify-section-{{ section.id }} .image-with-text {
-            margin-bottom: calc(-1 * var(--container-gutter)) !important;
-          }
-        {%- endunless -%}
-      {%- elsif section.settings.background_overlap == 'text' -%}
-        {%- unless is_boxed -%}
-          #shopify-section-{{ section.id }} .section {
-            margin-bottom: 0;
+          .custom .container{
+            padding: 62px 33px 89px 32px
           }
 
-          #shopify-section-{{ section.id }} .image-with-text {
-            margin-top: calc(-1 * var(--vertical-breather)) !important;
+          .custom .image-with-text__image-wrapper{
+            margin-bottom:61px
           }
-        {%- else -%}
-          #shopify-section-{{ section.id }} .image-with-text {
-            margin-top: calc(-1 * var(--container-gutter)) !important;
+
+          .custom .image-with-text__content-list {
+            width: 287px;
           }
-        {%- endunless -%}
-      {%- endif -%}
-    }
-  {%- endif -%}
 
-  .custom .container {
-    padding:0;
-  }
-  .custom .image-with-text__wrapper{
-    width:100%;
-    padding:76px 26px 75px 84px;
-  }
+          .custom .image-with-text-title{
+            margin-bottom:34px;
+            font-size: 20px;
+            line-height: 31px;
+            letter-spacing: 0.02em;
+          }
 
-  .custom .image-with-text__image{
-    width:502px;
-    height:545px;
-  }
-  .custom .image-with-text__content{
-    width:472px;
-    height:300px;
-    margin-left:10px;
-  }
+          .custom .image-with-text__text-wrapper p{
+            margin-bottom:34px;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.08em;
+          }
+        }
 
-  .custom .image-with-text-title{
-    font-family: 'Gotham';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 0px;
-    letter-spacing: 0.02em;
-    color: #000000;
-    margin-bottom:40px
-  }
+        /* TABLET */
+        @media screen and (min-width:700px) and (max-width:999px){
+          .text-with-image-background{
+            background-color: #008000
+          }
 
-  .custom .image-with-text__text-wrapper{
-    margin-bottom:11px;
-  }
+          .custom .image-with-text__wrapper {
+            padding:40px 20px;
+            justify-content: space-between;
+            align-items:center;
+            display: flex;
+            flex-wrap: nowrap;
+            margin:0;
+            flex-direction:row;
+          }
 
-  .custom .image-with-text__text-wrapper p{
-    margin:0;
-    width:100%;
-    font-family: Courier New;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0.08em;
-  }
+          .custom .image-with-text__content-wrapper {
+            width:40%;
+          }
 
-  .custom .custom__button {
-    margin-top: 7px;
-    font-family: 'Courier New';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    letter-spacing: 0.08em;
-    text-decoration-line: underline;
-    color: #000000;
-  }
+          .custom .image-with-text-title{
+            margin-bottom:20px;
+            font-size: 20px;
+            line-height: 31px;
+            letter-spacing: 0.02em;
+          }
 
-  @media screen and (max-width: 750px){
-    .custom .container {
-      height:937px;
-    }
+          .custom .image-with-text__text-wrapper p{
+            margin-bottom:20px;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.08em;
+          }
+        }
 
-    .custom .image-with-text__wrapper{
-      width:100%;
-      padding:62px 33px 61px 32px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center
-    }
+        /* DESKTOP */
+        @media screen and (min-width:999px){
+          .text-with-image-background{
+            background-color:	#89CFF0
+          }
+          .custom .container{
+            padding: 76px 0px 75px 153px
+          }
 
-    .custom .image-with-text__image{
-      width:325px;
-      height:383px;
-      padding-bottom:29px;
-    }
+          .custom .image-with-text__wrapper {
+            padding:0;
+            align-items:center;
+            display: flex;
+            flex-wrap: nowrap;
+            margin:0;
+            flex-direction:row;
+            margin:0
+          }
 
-    .custom .image-with-text__content{
-      width:287px;
-      height:228px;
-      margin-left:0px;
-    }
+          .custom .image-with-text__image-wrapper{
+            width: 502px;
+            height: 545px;
+            margin-right:171px
+          }
 
-    .custom .custom__button {
-      margin-top: 7px;
-      font-family: 'Courier New';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 20px;
-      text-align: center;
-      letter-spacing: 0.08em;
-      text-decoration-line: underline;
-      color: #000000;
-      z-index:8;
-      position:absolute;
-      text-align:center;
-      width:100%;
-      left:0
-    }
-    .custom .image-with-text-title{
-      margin-bottom:30px
-    }
+          .custom .image-with-text__image{
+            width: 502px;
+            height: 545px;
+          }
 
-    .custom .image-with-text__text-wrapper p{
-      margin-bottom:28px
-    }
+          .custom .image-with-text__content-wrapper {
+            width:472px;
+          }
 
-    .custom .image-with-text-title{
-      margin-bottom:29px
-    }
-  }
-  @media screen and (min-width: 1000px){
-    .custom .container {
-      height:937px;
-      display:flex;
-      flex-direction:row;
-      justify-content:center;
-    }
-  }
+          .custom .image-with-text-title{
+            margin-bottom:40px;
+            font-size: 25px;
+          }
+
+          .custom .image-with-text__text-wrapper p{
+            margin-bottom:11px;
+            font-size: 16px;
+            font-family: 'Courier New';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            /* or 125% */
+
+            text-align: center;
+            letter-spacing: 0.08em;
+          }
+
+          .custom .link_button{
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+
+        @media screen and (min-width:999px) and (max-width:1199px){
+          .custom .image-with-text__image-wrapper{
+            margin-right:71px
+          }
+        }
 </style>
 
 <section class="custom">
@@ -254,7 +317,7 @@
             {%- endif -%}
           </div>
 
-          <div class="image-with-text__content-wrapper text__block">
+          <div class="image-with-text__content-wrapper">
             <div class="image-with-text__content-list ">
               {%- for block in section.blocks -%}
                 <image-with-text-item
