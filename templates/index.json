@@ -150,6 +150,7 @@
       "settings": {
         "reveal_on_scroll": true,
         "image": "shopify:\/\/shop_images\/BEST_SELLERS_HOMEPAGE_2_2.png",
+        "mobile_image": "shopify:\/\/shop_images\/BEST_SELLERS_HOMEPAGE_2_2_1.png",
         "subheading": "Subheading",
         "title": "VIRTUAL TRY ON",
         "content": "<p>Try before you buy with our Virtual Try-On glasses experience! Our virtual glasses fitting, powered by true-to-scale technology, provides a realistic view of how the frame will look on your face, allowing you to try eyeglasses online. Try it today on some of our most popular styles.<br\/><\/p>",
