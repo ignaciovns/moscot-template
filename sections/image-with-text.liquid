@@ -211,15 +211,15 @@
         >
       {%- endif -%}
     {%- endfor -%}
-    <div class="text-section">
-      <h1 class="first-section-title">VIRTUAL TRY ON</h1>
-      <p class="first-section-paragraph">
-        Try before you buy with our Virtual Try-On glasses experience! Our virtual glasses fitting, powered by
-        true-to-scale technology, provides a realistic view of how the frame will look on your face, allowing you to try
-        eyeglasses online. Try it today on some of our most popular styles.
-      </p>
-      <a class="first-section-link">FIND YOUR PERFECT FIT</a>
-    </div>
+    {%- for block in section.blocks -%}
+      <div class="text-section">
+        <h1 class="first-section-title">{{- block.settings.title | escape -}}</h1>
+        <p class="first-section-paragraph">
+          {{- block.settings.content -}}
+        </p>
+        <a class="first-section-link">{{- block.settings.button_text -}}</a>
+      </div>
+    {%- endfor -%}
   </div>
 </section>
 {% schema %}
