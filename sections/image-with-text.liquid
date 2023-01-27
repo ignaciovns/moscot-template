@@ -34,17 +34,7 @@
     --section-accent-background: {{ section.settings.accent_background.red }} {{ section.settings.accent_background.green }} {{ section.settings.accent_background.blue }} / {{ section.settings.accent_background.alpha }};
     --section-autoplay-duration: {{ section.settings.cycle_speed }}s;
     --section-animation-play-state: paused;
-    --section-background-color: {{section.settings.background_color}};
   }
-
-
-
-  .text-with-image-background{
-    background-color: var(--section-background-color)
-  }
-
-
-
 
   {%- if section.settings.background_overlap != 'both' -%}
     /* We have to remove some extra spacing adding in non-overlap mode */
@@ -80,334 +70,158 @@
       {%- endif -%}
     }
   {%- endif -%}
-
-  .custom image-with-text{
-    padding:0;
-    margin:0;
+  .custom-first-section{
+    height:696px;
+    background-color:#FEF9E9;
+    padding:76px 142px 75px 153px;
   }
 
-  .custom .image-with-text__content-wrapper {
-    justify-content: center;
-    display: flex;
-    flex-wrap: nowrap;
-    margin:0;
+  .image-with-text-wrapper{
+    height:100%;
+    display:flex;
+    align-items:center;
   }
 
-  .custom .image-with-text__image-wrapper{
-    justify-content: center;
-    display: flex;
-    flex-wrap: nowrap;
-    margin:0;
+  .image-with-text__image{
+    width: 502px;
+    height: 545px;
+    margin-right:171px;
   }
-  /* SIEMPRE IGUAL MENOS DESKTOP */
-  .custom .image-with-text__image{
-    width: 325px;
-    height: 383px;
+  .text-section{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    width:472px;
+    margin-bottom:14px;
   }
 
-  .custom .image-with-text-title{
-    font-family: Gotham;
+  .first-section-title{
+    font-family: 'Gotham';
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 25px;
+    line-height: 31px;
+    letter-spacing: 0.02em;
+    margin-bottom:40px;
   }
 
-  .custom .image-with-text__text-wrapper p{
+  .first-section-paragraph{
     font-family: 'Courier New';
     font-style: normal;
     font-weight: 400;
-    margin-bottom:0px;
+    font-size: 16px;
+    line-height: 20px;
+    /* or 125% */
     text-align: center;
+    letter-spacing: 0.08em;
+    margin-top:0;
+    margin-bottom:11px;
   }
-
-  .custom .link_button{
+  .first-section-link{
     font-family: 'Courier New';
     font-style: normal;
     font-weight: 400;
-    text-decoration-line: underline;
-    font-size:14px;
+    font-size: 16px;
     line-height: 20px;
     text-align: center;
     letter-spacing: 0.08em;
+    text-decoration-line: underline;
   }
 
-  /* MOBILE*/
-  @media screen and (min-width:320px) and (max-width:700px){
-
-
-    .custom .container{
-      padding: 62px 33px 89px 32px
-    }
-
-    .custom .image-with-text__image-wrapper{
-      margin-bottom:61px
-    }
-
-    .custom .image-with-text__content-list {
-      width: 287px;
-    }
-
-    .custom .image-with-text-title{
-      margin-bottom:34px;
-      font-size: 20px;
-      line-height: 31px;
-      letter-spacing: 0.02em;
-    }
-
-    .custom .image-with-text__text-wrapper p{
-      margin-bottom:34px;
-      font-size: 14px;
-      line-height: 20px;
-      letter-spacing: 0.08em;
-    }
-  }
-
-  /* TABLET */
-  @media screen and (min-width:700px) and (max-width:999px){
-
-
-    .custom .image-with-text__wrapper {
+  /* tablet */
+  @media screen and (min-width:700px) and (max-width:1200px){
+    .custom-first-section{
       padding:40px 20px;
-      justify-content: space-between;
-      align-items:center;
-      display: flex;
-      flex-wrap: nowrap;
-      margin:0;
-      flex-direction:row;
+    }
+    .image-with-text-wrapper{
+      justify-content:space-around;
     }
 
-    .custom .image-with-text__content-wrapper {
-      width:40%;
+    .image-with-text__image{
+      width: 350px;
+      height: 400px;
+      margin-right:0px;
     }
 
-    .custom .image-with-text-title{
-      margin-bottom:20px;
-      font-size: 20px;
-      line-height: 31px;
-      letter-spacing: 0.02em;
+    .text-section{
+      padding:10px;
     }
 
-    .custom .image-with-text__text-wrapper p{
-      margin-bottom:20px;
+    .first-section-paragraph{
       font-size: 14px;
-      line-height: 20px;
-      letter-spacing: 0.08em;
     }
+
+
   }
 
-  /* DESKTOP */
-  @media screen and (min-width:999px){
-
-    .custom .container{
-      padding: 76px 0px 75px 153px
-    }
-
-    .custom .image-with-text__wrapper {
-      padding:0;
-      align-items:center;
-      display: flex;
-      flex-wrap: nowrap;
-      margin:0;
-      flex-direction:row;
-      margin:0
-    }
-
-    .custom .image-with-text__image-wrapper{
-      width: 502px;
-      height: 545px;
-      margin-right:171px
-    }
-
-    .custom .image-with-text__image{
-      width: 502px;
-      height: 545px;
-    }
-
-    .custom .image-with-text__content-wrapper {
-      width:472px;
-    }
-
-    .custom .image-with-text-title{
-      margin-bottom:40px;
-      font-size: 25px;
-    }
-
-    .custom .image-with-text__text-wrapper p{
-      margin-bottom:11px;
-      font-size: 16px;
-      font-family: 'Courier New';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 20px;
-      /* or 125% */
-
-      text-align: center;
-      letter-spacing: 0.08em;
-    }
-
-    .custom .link_button{
-      font-size: 16px;
-      line-height: 20px;
-    }
-  }
-
-  @media screen and (min-width:999px) and (max-width:1300px){
-    .custom .container{
-      padding: 76px 10px 75px 70px
-    }
-    .custom .image-with-text__image-wrapper{
-      margin-right:70px
-    }
-    .custom .image-with-text__wrapper {
+  /* mobile */
+  @media screen and (max-width:690px){
+    .custom-first-section{
       width:100%;
-      padding:0;
-      align-content:space-between;
-      display: flex;
-      flex-wrap: nowrap;
-      margin:0;
-      flex-direction:row;
+      height:937px;
+      padding:62px 33px 0px 32px;
     }
+
+    .image-with-text-wrapper{
+      display:flex;
+      align-items:center;
+      flex-direction: column;
+      height:min-content;
+    }
+
+    .image-with-text__image{
+      width: 325px;
+      height: 383px;
+      margin-right:0;
+      margin-bottom: 61px;
+    }
+
+    .text-section{
+      width:287px;
+      padding:0;
+      margin:0;
+    }
+
+    .first-section-title{
+      font-size: 20px;
+      margin-bottom:34px;
+    }
+    .first-section-paragraph{
+      font-size: 14px;
+      margin-bottom:34px;
+      line-height: 20px;
+    }
+
+    .first-section-link{
+      font-size: 14px;
+    }
+
   }
 </style>
-
-<section class="custom">
-  <div
-    {% if is_boxed %}
-      class="container"
-    {% endif %}
-  >
-    {%- assign first_block = section.blocks.first -%}
-
-    <image-with-text
-      {% if section.settings.reveal_on_scroll %}
-        reveal-on-scroll
-      {% endif %}
-      class="image-with-text {% if is_boxed %}image-with-text--boxed{% endif %} {% if section.settings.image_position == 'right' %}image-with-text--reverse{% endif %} image-with-text--overlap-{{ section.settings.background_overlap }} text-with-image-background"
-      style="--image-aspect-ratio: {{ first_block.settings.image.aspect_ratio | default: 1 }}; --image-max-height: {{ first_block.settings.image.height }}px"
-    >
-      <div class="{% unless is_boxed %}container{% endunless %}">
-        <div class="image-with-text__wrapper">
-          {%- assign first_image_aspect_ratio = first_block.settings.image.aspect_ratio | default: 1 -%}
-          {%- assign image_count = 0 -%}
-
-          <div class="image-with-text__image-wrapper">
-            {%- for block in section.blocks -%}
-              {%- if block.settings.image != blank -%}
-                <img
-                  id="block-{{ block.id }}-{{ block.settings.image.id }}"
-                  class="image-with-text__image"
-                  {% if section.settings.reveal_on_scroll %}
-                    reveal-visibility
-                  {% endif %}
-                  {% unless image_count == 0 %}
-                    hidden
-                  {% endunless %}
-                  loading="lazy"
-                  {% render 'image-attributes', image: block.settings.image, sizes: '600,700,800,1000,1200,1400' %}
-                >
-                {%- assign image_count = image_count | plus: 1 -%}
-              {%- endif -%}
-            {%- endfor -%}
-
-            {%- if image_count == 0 -%}
-              {%- if section.settings.reveal_on_scroll -%}
-                {{-
-                  'image'
-                  | placeholder_svg_tag: 'image-with-text__image placeholder-background'
-                  | replace: '<svg', '<svg reveal-visibility'
-                -}}
-              {%- else -%}
-                {{- 'image' | placeholder_svg_tag: 'image-with-text__image placeholder-background' -}}
-              {%- endif -%}
-            {%- endif -%}
-          </div>
-
-          <div class="image-with-text__content-wrapper">
-            <div class="image-with-text__content-list ">
-              {%- for block in section.blocks -%}
-                <image-with-text-item
-                  {% if block.settings.image != blank and image_count > 1 %}
-                    attached-image="block-{{ block.id }}-{{ block.settings.image.id }}"
-                  {% endif %}
-                  {% unless forloop.first %}
-                    hidden
-                  {% endunless %}
-                  class="image-with-text__content text-container text--{{ section.settings.text_alignment }}"
-                  {{ block.shopify_attributes }}
-                >
-                  {%- if block.settings.subheading != blank -%}
-                    <h2 class="heading heading--small">
-                      <split-lines
-                        {% if section.settings.reveal_on_scroll or forloop.first != true %}
-                          reveal
-                        {% endif %}
-                      >
-                        {{- block.settings.subheading | escape -}}
-                      </split-lines>
-                    </h2>
-                  {%- endif -%}
-
-                  {%- if block.settings.title != blank -%}
-                    <h3 class="image-with-text-title">
-                      <split-lines
-                        {% if section.settings.reveal_on_scroll or forloop.first != true %}
-                          reveal
-                        {% endif %}
-                      >
-                        {{- block.settings.title | escape -}}
-                      </split-lines>
-                    </h3>
-                  {%- endif -%}
-
-                  <div
-                    class="image-with-text__text-wrapper"
-                    {% if section.settings.reveal_on_scroll or forloop.first != true %}
-                      reveal
-                    {% endif %}
-                  >
-                    {%- if block.settings.content != blank -%}
-                      {{- block.settings.content -}}
-                    {%- endif -%}
-
-                    {%- if block.settings.button_text != blank -%}
-                      <div class="custom__button">
-                        <a
-                          href="{{ block.settings.button_link }}"
-                          class="link_button"
-                        >
-                          {{- block.settings.button_text -}}
-                        </a>
-                      </div>
-                    {%- endif -%}
-                  </div>
-                </image-with-text-item>
-              {%- endfor -%}
-            </div>
-
-            {%- comment -%}If we have two blocks we show the navigation{%- endcomment -%}
-            {%- if section.blocks.size > 1 -%}
-              <page-dots animation-timer class="image-with-text__navigation">
-                {%- for block in section.blocks -%}
-                  <button
-                    type="button"
-                    class="image-with-text__navigation-item"
-                    {% if forloop.first %}
-                      aria-current="true"
-                    {% endif %}
-                  >
-                    <span class="heading heading--small">{{- block.settings.tab_label | escape -}}</span>
-                  </button>
-                {%- endfor -%}
-              </page-dots>
-            {%- endif -%}
-          </div>
-        </div>
-      </div>
-    </image-with-text>
+<section class="custom-first-section">
+  <div class="image-with-text-wrapper">
+    {%- assign first_image_aspect_ratio = first_block.settings.image.aspect_ratio | default: 1 -%}
+    {%- assign image_count = 0 -%}
+    {%- for block in section.blocks -%}
+      {%- if block.settings.image != blank -%}
+        <img
+          class="image-with-text__image"
+          {% render 'image-attributes', image: block.settings.image, sizes: '600,700,800,1000,1200,1400' %}
+          alt=""
+        >
+      {%- endif -%}
+    {%- endfor -%}
+    <div class="text-section">
+      <h1 class="first-section-title">VIRTUAL TRY ON</h1>
+      <p class="first-section-paragraph">
+        Try before you buy with our Virtual Try-On glasses experience! Our virtual glasses fitting, powered by
+        true-to-scale technology, provides a realistic view of how the frame will look on your face, allowing you to try
+        eyeglasses online. Try it today on some of our most popular styles.
+      </p>
+      <a class="first-section-link">FIND YOUR PERFECT FIT</a>
+    </div>
   </div>
 </section>
-
 {% schema %}
 {
   "name": "Image with text",
@@ -437,39 +251,6 @@
       ],
       "default": "full_width"
     },
-    {
-      "type": "select",
-      "id": "background_color",
-      "label": "Background color",
-      "options": [
-        {
-          "value": "#ffffff",
-          "label": "Default White"
-        },
-        {
-          "value": "#FEF9E9",
-          "label": "Yellow Moscot"
-        }
-      ],
-      "default": "#ffffff"
-    },
-    {
-      "type": "select",
-      "id": "button_select",
-      "label": "Button style",
-      "options": [
-        {
-          "value": "button button--primary",
-          "label": "Default button"
-        },
-        {
-          "value": "custom__button",
-          "label": "Link button"
-        }
-      ],
-      "default": "button button--primary"
-    },
-
     {
       "type": "select",
       "id": "background_overlap",
