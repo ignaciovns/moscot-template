@@ -49,7 +49,7 @@
   }
   .carousel-cell .is-selected {
   border: 1px solid blue;
-}
+  }
 </style>
 <product-item
   class="product-item {% unless product.available %}product-item--sold-out{% endunless %}"
@@ -396,7 +396,7 @@
                       <label
                         class="color-swatch__item"
                         for="{{ color_id }}"
-                        style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: value %}"
+                        style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: value %} width:500px"
                       >
                         <span class="visually-hidden">{{ value }}</span>
                       </label>
