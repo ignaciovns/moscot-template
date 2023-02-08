@@ -8,45 +8,47 @@
   {%- assign product_url_contains_query = false -%}
 {%- endif -%}
 <style>
-  .carousel-cell {
-    width: 27px;
-    height: 27px;
-    margin-right: 10px;
-    border-radius: 100%;
+    .carousel-cell {
+      width: 27px;
+      height: 27px;
+      margin-right: 10px;
+      border-radius: 100%;
+    }
+    .flickity-viewport{
+      display:flex;
+      justify-content:center;
+      alig-items:center;
+    }
+    .flickity-slider{
+      ftransform: translateX(-4px);
   }
-  .flickity-viewport{
-    display:flex;
-    justify-content:center;
-    alig-items:center;
-  }
+    .flickity-prev-next-button {
+      width: 19px;
+      height: 19px;
+      border-radius: 5px;
+    }
+    /* icon color */
+    .flickity-button {
+      background: transparent;
+    }
+    .flickity-prev-next-button.previous {
+      position: absolute;
+      left: -40px;
+      top: 3px;
+    }
+    .flickity-prev-next-button.next {
+      position: absolute;
+      right: -40px;
+      top: 3px;
+    }
+    /* icon color */
+    .flickity-button-icon {
+      fill: black;
+    }
 
-  .flickity-prev-next-button {
-    width: 19px;
-    height: 19px;
-    border-radius: 5px;
-  }
-  /* icon color */
-  .flickity-button {
-    background: transparent;
-  }
-  .flickity-prev-next-button.previous {
-    position: absolute;
-    left: -40px;
-    top: 3px;
-  }
-  .flickity-prev-next-button.next {
-    position: absolute;
-    right: -40px;
-    top: 3px;
-  }
-  /* icon color */
-  .flickity-button-icon {
-    fill: black;
-  }
-
-  .carousel {
-    width: 140px;
-  }
+    .carousel {
+      width: 140px;
+    }
 </style>
 <product-item
   class="product-item {% unless product.available %}product-item--sold-out{% endunless %}"
