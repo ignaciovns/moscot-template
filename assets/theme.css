@@ -6172,6 +6172,8 @@ input:checked + .popover__choice-label::after,
   width: 27px;
   height: 27px;
   border-width: 2px;
+  margin-right: 10px;
+  
 }
 
 .color-swatch-list--mini .color-swatch__item::before,
