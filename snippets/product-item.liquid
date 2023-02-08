@@ -476,9 +476,10 @@
       var $carousel = $('.carousel').flickity();
 
       $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
-        if ( typeof cellIndex == 'number' ) {
+        console.log(cellIndex)
+        /* if ( typeof cellIndex == 'number' ) {
           $carousel.flickity( 'selectCell', cellIndex );
-        }
+        } */
       });
     })
   </script>
