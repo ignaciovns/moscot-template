@@ -6169,8 +6169,8 @@ input:checked + .popover__choice-label::after,
 }
 
 .color-swatch-list--mini .color-swatch__item {
-  width: 14px;
-  height: 14px;
+    width: 27px;
+    height: 27px;
   border-width: 2px;
 }
 
