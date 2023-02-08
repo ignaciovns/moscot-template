@@ -489,6 +489,7 @@
         value="{{ value | escape }}"
         {% if product_option.selected_value == value %}
           checked="checked"
+          style=" border: 3px solid red;"
         {% endif %}
         data-variant-id="{{ variant_for_value.id }}"
         {% if variant_for_value.featured_media %}
@@ -499,8 +500,8 @@
         class="carousel-cell"
         for="{{ color_id }}"
         value="{{ value | escape }}"
-        style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: value, border: 3px solid red  %}"
-        >aaaaaaaaaaa
+        style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: value,  %}"
+      >
         <span class="visually-hidden">{{ value }}</span>
       </label>
     {%- endfor -%}
