@@ -12725,7 +12725,7 @@ shopify-payment-terms {
   margin-top: 10px;
   margin-bottom: 2px; /* The extra 2px at the bottom is to avoid the border to be clipped on iOS */
   justify-content: center;
-  gap: 6px;
+  gap: 10px;
   overflow-wrap: anywhere;
 }
 
