@@ -47,17 +47,7 @@
     width: 125px;
   }
 </style>
-<script>
-    jQuery(document).ready(function(){
-    var $carousel = $('.carousel').flickity();
 
-    $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
-      if ( typeof cellIndex == 'number' ) {
-        $carousel.flickity( 'selectCell', cellIndex );
-      }
-    });
-  })
-</script>
 <product-item
   class="product-item {% unless product.available %}product-item--sold-out{% endunless %}"
   {% if reveal %}
@@ -481,4 +471,15 @@
       </div>
     {%- endif -%}
   </div>
+  <script>
+      jQuery(document).ready(function(){
+      var $carousel = $('.carousel').flickity();
+
+      $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
+        if ( typeof cellIndex == 'number' ) {
+          $carousel.flickity( 'selectCell', cellIndex );
+        }
+      });
+    })
+  </script>
 </product-item>
