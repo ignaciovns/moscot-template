@@ -393,8 +393,7 @@
                         {% if variant_for_value.featured_media %}
                           data-variant-featured-media="{{ variant_for_value.featured_media.id }}"
                         {% endif %}
-
-                      >aaaaaaaaaaa
+                      >
                       <label
                         class="color-swatch__item"
                         for="{{ color_id }}"
@@ -501,7 +500,7 @@
         for="{{ color_id }}"
         value="{{ value | escape }}"
         style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: value, border: 3px solid red  %}"
-      >
+        >aaaaaaaaaaa
         <span class="visually-hidden">{{ value }}</span>
       </label>
     {%- endfor -%}
