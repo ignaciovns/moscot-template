@@ -6110,7 +6110,7 @@ input:checked + .popover__choice-label::after,
 .color-swatch-list {
   display: flex;
   justify-content:center;
-  alignItems:center;
+  align-items:center;
   height:auto;
 }
 
