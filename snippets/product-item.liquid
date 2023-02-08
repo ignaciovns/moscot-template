@@ -497,7 +497,9 @@
       <label
         class="carousel-cell"
         for="{{ color_id }}"
-        style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: value %}"
+        style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: value %} {% if product_option.selected_value == value %}
+          border: 1px solid blue;
+        {% endif %}"
       >
         <span class="visually-hidden">{{ value }}</span>
       </label>
