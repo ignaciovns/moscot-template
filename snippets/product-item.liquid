@@ -48,7 +48,13 @@
   }
 </style>
 <script>
-  console.log("hola")
+    var flkty = new Flickity('.carousel');
+
+  flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
+    if ( typeof cellIndex == 'number' ) {
+      flkty.selectCell( cellIndex );
+    }
+  });
 </script>
 <product-item
   class="product-item {% unless product.available %}product-item--sold-out{% endunless %}"
