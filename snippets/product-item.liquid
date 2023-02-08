@@ -366,7 +366,7 @@
                   {%- capture color_name -%}{{ section.id }}-{{ block.id }}-{{ product.id }}{%- endcapture -%}
                   <div
                     class="carousel"
-                    data-flickity='{ "groupCells": 4, "pageDots": false, "resize": false, "percentPosition": false, "contain": true, "wrapAround": true }'
+                    data-flickity='{ "groupCells": 4, "pageDots": false, "resize": false, "percentPosition": true, "contain": true, "draggable": ">4" }'
                   >
                     {%- for value in product_option.values -%}
                       {%- capture color_id -%}{{ color_name }}-{{ forloop.index }}{%- endcapture -%}
