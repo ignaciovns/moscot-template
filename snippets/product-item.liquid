@@ -63,7 +63,7 @@
       var $cellElements = $carousel.flickity('getCellElements')
        $('.flickity-button').on( 'click', function() {
             $carousel.flickity( 'select', 2 );
-            $cellElements.find("is-selected")
+            $cellElements.filter('.is-selected')
             console.log($cellElements)
         });
     });
