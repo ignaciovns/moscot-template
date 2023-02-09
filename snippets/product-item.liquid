@@ -55,17 +55,23 @@
   {% endif %}
 >
   <script>
-    $(document).ready( function() {
-      var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity()
-      var $cellElements = $carousel.flickity('getCellElements')
-       $('.flickity-button').on( 'click', function() {
-               var $input = $($cellElements).filter('.is-selected')[0].firstElementChild
-                console.log($($cellElements).filter('.is-selected'))
-               $($input).attr( 'checked', true )
-        });
+      $(document).ready( function() {
+    var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity()
+    /*
+        var $cellElements = $carousel.flickity('getCellElements')
+         $('.flickity-button').on( 'click', function() {
+                 var $input = $($cellElements).filter('.is-selected')[0].firstElementChild
+                  console.log($($cellElements).filter('.is-selected'))
+                 $($input).attr( 'checked', true )
+          }); */
+        $('.flickity-button').on( 'click', function() {
+        $carousel.flickity('next');
+        $('.color-swatch__radio').trigger('click');
+        //casos bordes..
+        //pregutar si estan en el ultimo elemnto, si estas en el primero,
+      });
 
-
-    });
+      });
   </script>
   {%- capture product_labels -%}
     {%- for tag in product.tags -%}
