@@ -64,7 +64,7 @@
        $('.flickity-button').on( 'click', function() {
             $carousel.flickity( 'select', 1 );
              var $input = $($cellElements).filter('.is-selected')[0].firstElementChild
-             console.log($input)
+             console.log($($input))
             $input.attr( 'checked', true )
         });
     });
