@@ -70,8 +70,8 @@
       $('.flickity-button').on( 'click', function() {
         console.log("hola")
         $carousel.find('.is-selected').removeClass('is-selected');
-        $carousel.flickity('next').addClass('is-selected');
-      });
+        console.log($carousel.flickity('next'))
+      })
     });
   </script>
   {%- capture product_labels -%}
