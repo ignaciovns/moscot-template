@@ -57,9 +57,10 @@
   <script>
     $(document).ready( function() {
       var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity()
+      var cellElements = $carousel.flickity('getCellElements')
        $('.flickity-button').on( 'click', function() {
             $carousel.flickity( 'select', 2 );
-            console.log( $carousel.flickity( 'select', 2 ))
+            console.log(cellElements)
         });
     });
   </script>
