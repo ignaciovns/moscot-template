@@ -59,7 +59,7 @@
           var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity()
           $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
           if ( typeof cellIndex == 'number' ) {
-          $carousel.flickity( 'selectCell', cellIndex );
+          $carousel.( 'selectCell', cellIndex );
           }
           var $cellElements = $carousel.flickity('getCellElements')
            $('.flickity-button').on( 'click', function() {
