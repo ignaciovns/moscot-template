@@ -56,7 +56,7 @@
 >
   <script>
     var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity();
-
+    console.log($carousel)
     $carousel.on( 'select.flickity', function( event, index ) {
       console.log( 'Flickity select ' + index )
       });
