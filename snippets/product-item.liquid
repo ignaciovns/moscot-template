@@ -63,7 +63,7 @@
                 console.log($($cellElements).filter('.is-selected'))
                $($input).attr( 'checked', true ).trigger('click');
         });
-      $($carousel).flickity({
+      $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity({
         contain: true,
         pageDots: false
       });
