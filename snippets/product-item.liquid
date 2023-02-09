@@ -63,9 +63,9 @@
              $($input).attr( 'checked', true )
         });
 
-      var theDivs = ($cellElements).filter(function() {
-        console.log($(this))
-        return $(this).find('.color-swatch.is-selected').length === 0;
+      var theDivs = ($cellElements).filter(function(element) {
+        console.log($(element))
+        return $(element).find('.color-swatch.is-selected').length === 0;
       });
     });
   </script>
