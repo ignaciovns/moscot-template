@@ -59,7 +59,8 @@
       var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity().flickity('next').flickity( 'select', 1 );
        $('.flickity-button').on( 'click', function() {
             $carousel.find('.is-selected').removeClass('is-selected');
-            $carousel.flickity('next');
+            $carousel.flickity('next').addClass('is-selected');
+         console.log("holas")
         });
     });
   </script>
