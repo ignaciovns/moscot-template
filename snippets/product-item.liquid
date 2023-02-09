@@ -67,8 +67,8 @@
         $( cellElement ).addClass('is-selected');
          console.log( 'Cell ' + ( cellIndex + 1 )  + ' clicked' );
       });
-      $('.flickity-button').on( 'click', function() {
-        console.log("hola")
+      $('.flickity-button').on( 'click', function(cellElement, cellIndex) {
+        console.log(cellIndex)
         $carousel.find('.is-selected').removeClass('is-selected');
         console.log($carousel.flickity('next'))
       })
