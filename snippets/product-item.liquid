@@ -60,7 +60,7 @@
       var $cellElements = $carousel.flickity('getCellElements')
        $('.flickity-button').on( 'click', function() {
              var $input = $($cellElements).filter('.is-selected')[0].firstElementChild
-             var $input2 = $($cellElements).map($(element) => console.log($(element)) )
+             var $input2 = $($cellElements).map(($element) => console.log($(element)) )
              $($input).attr( 'checked', true )
          console.log($input2)
         });
