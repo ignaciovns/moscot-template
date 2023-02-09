@@ -55,12 +55,10 @@
   {% endif %}
 >
   <script>
-    var $carousel = $('.carousel').flickity();
+        var $carousel = $('.carousel').flickity();
 
-    $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
-      if ( typeof cellIndex == 'number' ) {
-        $carousel.flickity( 'selectCell', cellIndex );
-      }
+        $carousel.on( 'select.flickity', function( event, index ) {
+      console.log( 'Flickity select ' + index )
     });
   </script>
   {%- capture product_labels -%}
