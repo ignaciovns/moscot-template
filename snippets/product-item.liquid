@@ -55,7 +55,7 @@
   {% endif %}
 >
   <script>
-    var $carousel = $('.carousel').flickity();
+    var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity();
 
     $carousel.on( 'select.flickity', function( event, index ) {
       console.log( 'Flickity select ' + index )
@@ -373,7 +373,7 @@
 
                   {%- capture color_name -%}{{ section.id }}-{{ block.id }}-{{ product.id }}{%- endcapture -%}
                   <div
-                    class="carousel-{{ color_name }}"
+                    class="carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}"
                     data-flickity='{ "pageDots": false, "resize": false, "percentPosition": true }'
                   >
                     {%- for value in product_option.values -%}
