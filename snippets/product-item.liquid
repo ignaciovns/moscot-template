@@ -60,8 +60,9 @@
       var $cellElements = $carousel.flickity('getCellElements')
        $('.flickity-button').on( 'click', function() {
             $carousel.flickity( 'select');
-             var $input = $($cellElements).filter('.is-selected')[0].firstElementChild
-             console.log($($input))
+             var $input = $($cellElements).filter(!'.is-selected')[0].firstElementChild
+             var $inputsNoncheck = $($cellElements).filter(!'.is-selected')
+             console.log($inputsNoncheck)
              $($input).attr( 'checked', true )
         });
     });
