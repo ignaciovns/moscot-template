@@ -55,15 +55,13 @@
   {% endif %}
 >
   <script>
-      jQuery(document).ready(function(){
-      var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity();
-      $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
-        if ( typeof cellIndex == 'number' ) {
-          console.log(cellElement)
-          $carousel.flickity( 'selectCell', cellIndex );
-        }
-      });
-    })
+    var $carousel = $('.carousel').flickity();
+
+    $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
+      if ( typeof cellIndex == 'number' ) {
+        $carousel.flickity( 'selectCell', cellIndex );
+      }
+    });
   </script>
   {%- capture product_labels -%}
     {%- for tag in product.tags -%}
