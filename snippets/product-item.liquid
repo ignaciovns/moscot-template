@@ -64,11 +64,12 @@
           return;
         }
         // change cell background with .is-clicked
-        $carousel.find('.is-selected').removeClass('is-selected');
         $( cellElement ).addClass('is-selected');
          console.log( 'Cell ' + ( cellIndex + 1 )  + ' clicked' );
       });
       $('.flickity-button flickity-prev-next-button next').on( 'click', function() {
+        console.log("hola")
+        $carousel.find('.is-selected').removeClass('is-selected');
         $carousel.flickity('next').addClass('is-selected');
       });
     });
