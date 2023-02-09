@@ -59,8 +59,8 @@
       var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity()
       var $cellElements = $carousel.flickity('getCellElements')
        $('.flickity-button').on( 'click', function() {
-             var $input = $($cellElements).filter('.is-selected')[0].firstElementChild
               console.log($($input).has(':not(.is-selected)'));
+             var $input = $($cellElements).filter('.is-selected')[0].firstElementChild
                $($input).attr( 'checked', true )
         });
 
