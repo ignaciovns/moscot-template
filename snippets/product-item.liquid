@@ -63,9 +63,7 @@
       var $cellElements = $carousel.flickity('getCellElements')
        $('.flickity-button').on( 'click', function() {
             $carousel.flickity( 'select', 1 );
-             $cellElements.map(function (element) {
-                console.log($(element[0]))
-            })
+             console.log($(cellElements))
         });
     });
   </script>
