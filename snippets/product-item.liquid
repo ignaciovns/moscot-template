@@ -57,11 +57,11 @@
   <script>
     var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity();
     // previous
-    $('.button--previous').on( 'click', function() {
+    $('.button--previous--{{ section.id }}-{{ block.id }}').on( 'click', function() {
       $carousel.flickity('previous');
     });
     // next
-    $('.button--next').on( 'click', function() {
+    $('.button--next--{{ section.id }}-{{ block.id }}').on( 'click', function() {
       console.log("gola")
       $carousel.flickity('next');
     });
@@ -373,8 +373,8 @@
                 <div
                   class="product-item-meta__swatch-list color-swatch-list color-swatch-list--mini"
                 >
-                  <button class="button button--previous">&larr;</button>
-                  <button class="button button--next">&rarr;</button>
+                  <button class="button button--previous-{{ section.id }}-{{ block.id }}">&larr;</button>
+                  <button class="button button--next-{{ section.id }}-{{ block.id }}">&rarr;</button>
                   {%- assign variant_option = 'option' | append: product_option.position -%}
                   {%- assign color_swatch_config = settings.color_swatch_config | newline_to_br | split: '<br />' -%}
 
