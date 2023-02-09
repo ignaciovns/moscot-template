@@ -64,9 +64,9 @@
                    $($input).attr( 'checked', true ).trigger('click');
             });
         });
-        $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
-        if ( typeof cellIndex == 'number' ) {
-        $carousel.flickity( 'selectCell', cellIndex );
+          $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
+          if ( typeof cellIndex == 'number' ) {
+          $carousel.flickity( 'selectCell', cellIndex );
       }
     });
   </script>
