@@ -69,7 +69,7 @@
          console.log( 'Cell ' + ( cellIndex + 1 )  + ' clicked' );
       });
       $('.flickity-button flickity-prev-next-button next').on( 'click', function() {
-        $carousel.flickity('next');
+        $carousel.flickity('next').addClass('is-selected');
       });
     });
   </script>
