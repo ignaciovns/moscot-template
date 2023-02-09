@@ -60,11 +60,11 @@
       var $cellElements = $carousel.flickity('getCellElements')
        $('.flickity-button').on( 'click', function() {
              var $input = $($cellElements).filter('.is-selected')[0].firstElementChild
-              $($input).has(':not(.is-selected)');
-             $($input).attr( 'checked', true )
+              console.log($($input).has(':not(.is-selected)'));
+               $($input).attr( 'checked', true )
         });
 
-      console.log($pepe)
+
     });
   </script>
   {%- capture product_labels -%}
