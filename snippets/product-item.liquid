@@ -57,7 +57,10 @@
   <script>
     $(document).ready( function() {
       var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity().flickity('next').flickity( 'select', 1 );
-       console.log($carousel)
+       $('.flickity-button').on( 'click', function() {
+         console.log(hola)
+          $carousel.flickity('next');
+        });
     });
   </script>
   {%- capture product_labels -%}
