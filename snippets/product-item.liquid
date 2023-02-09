@@ -57,16 +57,17 @@
   <script>
         $(document).ready( function() {
           var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity()
+          $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
+          if ( typeof cellIndex == 'number' ) {
+          $carousel.flickity( 'selectCell', cellIndex );
+          }
           var $cellElements = $carousel.flickity('getCellElements')
            $('.flickity-button').on( 'click', function() {
                    var $input = $($cellElements).filter('.is-selected')[0].firstElementChild
                    $($input).attr( 'checked', true ).trigger('click');
             });
         });
-          $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
-          if ( typeof cellIndex == 'number' ) {
-          $carousel.flickity( 'selectCell', cellIndex );
-      }
+
     });
   </script>
   {%- capture product_labels -%}
