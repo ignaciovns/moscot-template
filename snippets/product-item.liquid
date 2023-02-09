@@ -63,8 +63,10 @@
       var $cellElements = $carousel.flickity('getCellElements')
        $('.flickity-button').on( 'click', function() {
             $carousel.flickity( 'select', 1 );
-            console.log($cellElements)
-            $(cellElements).find('.color-swatch.is-selected')
+            console.log($cellElements.filter((element) => {
+              console.log(element)
+            })
+
         });
     });
   </script>
