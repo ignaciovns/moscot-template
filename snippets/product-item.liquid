@@ -63,7 +63,7 @@
              $($input).attr( 'checked', true )
         });
 
-      var theDivs = ($cellElements).filter(function(element) {
+      var theDivs = ($cellElements).filter(function($element) {
         return $($element).find('.is-selected').length === 0;
       });
         console.log($(theDivs))
