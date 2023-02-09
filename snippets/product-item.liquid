@@ -56,7 +56,7 @@
 >
   <script>
     $(document).ready( function() {
-      var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity().flickity('next').flickity( 'select', 1 );
+      var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity()
        $('.flickity-button').on( 'click', function() {
             $carousel.find('.is-selected').removeClass('is-selected');
             $carousel.flickity('next').addClass('is-selected');
