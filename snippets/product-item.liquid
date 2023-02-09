@@ -56,22 +56,10 @@
 >
   <script>
     $(document).ready( function() {
+      var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity()
+      .flickity('next')
+      .flickity( 'select', 4 );
 
-        var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity();
-        $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
-        // dismiss if cell was not clicked
-        if ( !cellElement ) {
-          return;
-        }
-        // change cell background with .is-clicked
-        $( cellElement ).addClass('is-selected');
-         console.log( 'Cell ' + ( cellIndex + 1 )  + ' clicked' );
-      });
-      $('.flickity-button').on( 'click', function(cellElement, cellIndex) {
-        console.log(cellElement)
-        $carousel.find('.is-selected').removeClass('is-selected');
-        console.log($carousel.flickity('next'))
-      })
     });
   </script>
   {%- capture product_labels -%}
