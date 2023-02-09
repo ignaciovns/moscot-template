@@ -58,8 +58,8 @@
     $(document).ready( function() {
       var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity().flickity('next').flickity( 'select', 1 );
        $('.flickity-button').on( 'click', function() {
-           console.log($carousel.flickity('next'))
-          $carousel.flickity('next');
+            $carousel.find('.is-clicked').removeClass('is-clicked');
+            $carousel.flickity('next');
         });
     });
   </script>
