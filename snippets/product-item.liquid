@@ -55,16 +55,19 @@
   {% endif %}
 >
   <script>
-      var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity();
-      $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
-      // dismiss if cell was not clicked
-      if ( !cellElement ) {
-        return;
-      }
-      // change cell background with .is-clicked
-      $carousel.find('.is-selected').removeClass('is-selected');
-      $( cellElement ).addClass('is-selected');
-      $logger.text( 'Cell ' + ( cellIndex + 1 )  + ' clicked' );
+    $(document).ready( function() {
+
+        var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity();
+        $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
+        // dismiss if cell was not clicked
+        if ( !cellElement ) {
+          return;
+        }
+        // change cell background with .is-clicked
+        $carousel.find('.is-selected').removeClass('is-selected');
+        $( cellElement ).addClass('is-selected');
+        $logger.text( 'Cell ' + ( cellIndex + 1 )  + ' clicked' );
+      });
     });
   </script>
   {%- capture product_labels -%}
