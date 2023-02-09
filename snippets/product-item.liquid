@@ -63,6 +63,10 @@
                 console.log($($cellElements).filter('.is-selected'))
                $($input).attr( 'checked', true ).trigger('click');
         });
+      $($carousel).flickity({
+        contain: true,
+        pageDots: false
+      });
     });
   </script>
   {%- capture product_labels -%}
