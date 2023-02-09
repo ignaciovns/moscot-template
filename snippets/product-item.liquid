@@ -55,10 +55,12 @@
   {% endif %}
 >
   <script>
-        $('.button-group').on( 'click', '.button', function() {
-      var index = $(this).index();
-      $carousel.flickity( 'select', index );
-    });
+    var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity();
+     $('.flickity-button').on( 'click', '.button', function() {
+       var index = $(this).index();
+       $carousel.flickity( 'select', index );
+       console.log(hola)
+     });
   </script>
   {%- capture product_labels -%}
     {%- for tag in product.tags -%}
