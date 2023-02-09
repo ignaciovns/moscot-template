@@ -55,7 +55,8 @@
   {% endif %}
 >
   <script>
-        $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
+      var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity();
+      $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
       // dismiss if cell was not clicked
       if ( !cellElement ) {
         return;
