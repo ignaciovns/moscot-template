@@ -56,8 +56,8 @@
 >
   <script>
       jQuery(document).ready(function(){
-        console.log($carousel)
       var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity();
+        console.log($carousel[0][1])
       $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
         if ( typeof cellIndex == 'number' ) {
           console.log($carousel)
