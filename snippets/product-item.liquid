@@ -55,11 +55,9 @@
   {% endif %}
 >
   <script>
-    $(document).ready( function() {
-      var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity()
-      .flickity('next')
-      .flickity( 'select', 1 );
-       console.log($carousel)
+        $('.button-group').on( 'click', '.button', function() {
+      var index = $(this).index();
+      $carousel.flickity( 'select', index );
     });
   </script>
   {%- capture product_labels -%}
