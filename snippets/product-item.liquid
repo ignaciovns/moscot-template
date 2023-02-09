@@ -60,7 +60,7 @@
   <script>
     $(document).ready( function() {
       var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity()
-      var cellElements = $carousel.flickity('getCellElements')
+      var $cellElements = $carousel.flickity('getCellElements')
        $('.flickity-button').on( 'click', function() {
             $carousel.flickity( 'select', 2 );
             $cellElements.find(is-selected).removeClass(".is-selected")
