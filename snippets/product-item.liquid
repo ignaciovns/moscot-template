@@ -55,11 +55,10 @@
   {% endif %}
 >
   <script>
-
     var $carousel = $('.carousel-{{ section.id }}-{{ block.id }}-{{ product.id }}').flickity();
+        console.log($carousel)
     $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
       if ( typeof cellIndex == 'number' ) {
-        console.log($carousel)
         $carousel.flickity( 'selectCell', cellIndex );
       }
     });
