@@ -55,11 +55,11 @@
   {% endif %}
 >
   <script>
-        var $carousel = $('.carousel').flickity();
+    var $carousel = $('.carousel').flickity();
 
-        $carousel.on( 'select.flickity', function( event, index ) {
+    $carousel.on( 'select.flickity', function( event, index ) {
       console.log( 'Flickity select ' + index )
-    });
+      });
   </script>
   {%- capture product_labels -%}
     {%- for tag in product.tags -%}
