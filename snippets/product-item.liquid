@@ -60,7 +60,7 @@
       $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
         if ( typeof cellIndex == 'number' ) {
           console.log($carousel)
-          $carousel[0].flickity( 'selectCell', cellIndex );
+          $carousel[0].[1].flickity( 'selectCell', cellIndex );
         }
       });
     })
