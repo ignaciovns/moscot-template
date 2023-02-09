@@ -369,6 +369,8 @@
                 <div
                   class="product-item-meta__swatch-list color-swatch-list color-swatch-list--mini"
                 >
+                  <button class="button button--previous">&larr;</button>
+                  <button class="button button--next">&rarr;</button>
                   {%- assign variant_option = 'option' | append: product_option.position -%}
                   {%- assign color_swatch_config = settings.color_swatch_config | newline_to_br | split: '<br />' -%}
 
